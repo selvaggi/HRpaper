@@ -1,0 +1,60 @@
+%\RequirePackage{fix-cm}
+
+\documentclass[pdftex,twocolumn,epjc3]{svjour3}          % twocolumn
+
+\RequirePackage[T1]{fontenc}
+
+\smartqed  % flush right qed marks, e.g. at end of proof
+
+\RequirePackage{graphicx}
+\RequirePackage{mathptmx}      % use Times fonts if available on your TeX system
+\RequirePackage{flushend}
+\RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue,linkcolor=blue]{hyperref}
+
+\journalname{Eur. Phys. J. C}
+
+\begin{document}
+
+\title{Insert your title here\thanksref{t1}}
+
+\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+\author{First Author\thanksref{e1,addr1}
+        \and
+        Second Author\thanksref{e2,addr2,addr3} %etc.
+}
+
+\thankstext[$\star$]{t1}{Thanks to the title}
+\thankstext{e1}{e-mail: magic1@xxx.xx}
+\thankstext{e2}{e-mail: magic2@xxx.xx}
+
+\institute{First Address, Street, City, Country\label{addr1}
+          \and
+          Second Address, Street, City, Country\label{addr2}
+          \and
+          \emph{Present Address:} Street, City, Country\label{addr3}
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+Insert your abstract here. Insert your abstract here. Insert your abstract here.
+Insert your abstract here. Insert your abstract here. Insert your abstract here.
+Insert your abstract here. Insert your abstract here. Insert your abstract here.
+\end{abstract}
+
+
+
+\begin{thebibliography}{9}
+\bibliography{paper}
+\end{thebibliography}
+
+
+
+
+\end{document}
