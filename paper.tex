@@ -75,8 +75,11 @@
 \newcommand*{\cl}{C.L.~}
 
 \newcommand{\amc}{{\sc MadGraph5\textunderscore}a{\sc MC@NLO}}
+\newcommand*{\MGAMC}{\textsc{MG5}\_aMC}
+
 \newcommand{\py}{{\sc Pythia8}}
 \newcommand{\delphes}{{\sc Delphes3}}
+\newcommand*{\pdf}[1]{\texttt{#1}}
 
 \def\ifb{\mbox{fb$^{-1}$}}%  Inverse femtobarns.
 \def\afb{\mbox{ab$^{-1}$}}%  Inverse atobarns.
@@ -220,12 +223,8 @@ controls the overall coupling strength to all of the various SM particles.
 \subsection{Monte-Carlo production}
 \label{subsec:mcprod}
 
-% /eos/experiment/fcc/helhc/utils/delphescards/helhc_v01/card.tcl
-% /eos/experiment/fcc/hh/utils/delphescards/fcc_v02/muonMomentumResolutionVsP.tcl
-Monte Carlo~(MC) simulated event samples were used to simulate the response of the detector to signal and backgrounds. Signals are generated with \py~\cite{Sjostrand:2014zea} using the leading order cross-section from the generator.
-All lepton flavour decays of the $\ZpSSM$ are generated assuming universality of the couplings.\CH{do we need this here? That's too little information, we need a more complete description of all the various processes.}
-The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$,  were generated using \amc~\cite{Alwall:2014hca} at leading order only. A k-factor of 2 is applied to all the background processes to account for higher order corrections.
-Independent samples have been generated for the training of object tagger described in section~\ref{subsec:mvatagger}.
+Monte Carlo~(MC) simulated event samples are used to simulate the response of the detector to signal and backgrounds. Signals are generated with \py~\cite{Sjostrand:2014zea} version v8.201 with the \pdf{NNPDF2\!.\!3NNLO} PDF set~\cite{Ball:2014uwa} using the leading order cross-section from the generator with no k-factor. 
+The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$,  were generated using \MGAMC~\cite{Alwall:2014hca} v2.3.3 at leading order only with the XXX PDF set in bins of $\hht$. A k-factor of 2 is applied to all the background processes to account for higher order corrections.
 
 
 
@@ -258,25 +257,6 @@ For the FCC-hh and HE-LHC the basic performances can be summarised as follow: Th
 \end{table}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Multi-Variate object tagging}
-\label{subsec:mvatagger}
-
-% from physics paper
-An important ingredient of the \Zptt\ and \rsg\ searches is the identification of heavy boosted top quarks and $W$ bosons. Two object level taggers using Boosted Decision Trees (BDT) were developed to discriminate $W$ and top jets against the light jets treated as background.
-Top and $W$ taggers were optimised using jets with a transverse boost of $\pt=$10 TeV. At these extreme energies, $W$ and top jets have a characteristic angular size $R=0.01-0.02$, i.e smaller than the typical electromagnetic and hadronic calorimeter cells. Following the approach described in~\cite{Larkoski:2015yqa}, we exploit the superior track angular resolution and reconstruct jets from tracks only using the anti-$k_T$ algorithm with a parameter R=0.2, but also larger values are used to increase the discrimination power of the BDT. The missing neutral energy is corrected for by rescaling the track 4-momenta by the factor $\ptSub{,trk}/\ptSub{,PF}$, where $\ptSub{,trk}$ is the track Jet \pt\ and $\ptSub{,PF}$ is the Particle-Flow (PF) Jet \pt. In what follows, we will simply refer to ``track jets'' as the jet collection that includes the aforementioned rescaling.
-\newline
-The boosted top tagger is built from jet substructure observables: the soft-dropped jet mass~\cite{Larkoski:2014wba} (\mSD) and N-subjettiness~\cite{Thaler:2010tr} variables $\tau_{1,2,3}$ and their ratios $\tau_{2}/\tau_{1}$ ($\tau_{21}$) and $\tau_{3}/\tau_{2}$ ($\tau_{32}$). The $W$-jet tagger also uses an ``isolation-like'' variable that exploits the absence of high \pt\ final state-radiation (FSR) in the vicinity of the $W$ decay products. We call these variables $E_{F}(n,\alpha)$ and define them as:
-
-%\begin{equation}
-%E_{F}(n,\alpha) =  \frac{\sum \limits_{\frac{n-1}{5}\alpha < \Delta R(k,jet)< \frac{n}{5}\alpha} \ptSup{(k)}}{\sum \limits_{\Delta R(k,jet)< \alpha} \ptSup{(k)}}
-%\end{equation}
-
-\begin{equation}
-E_{F}(n,\alpha) =  \sum \limits_{\frac{n-1}{5}\alpha < \Delta R(k,jet)< \frac{n}{5}\alpha} \ptSup{(k)} \Biggm/ \sum \limits_{\Delta R(k,jet)< \alpha} \ptSup{(k)}
-\end{equation}
-with $k$ running over the jet constituents and $\alpha=0.05$. We construct 5 variables $E_{F}(n,\alpha)$ with $n=[1,2,3,4,5]$ and use them as input to the BDT.
-The $W$ tagging performance has significantly better performance due to the use of the energy-flow variables. We choose the working points for the analyses presented later with a top and $W$ tagging efficiencies of $\epsilon_S^{\text{top}}=60\%$ and $\epsilon_S^{\text{W}}=90\%$ corresponding respectively to a background rejection of $\epsilon_B^{\text{top}}=\epsilon_B^{\text{W}}=90\%$. These working points corresponds to a cut at 0.15 on the BDT value for both taggers. More details can be found in Appendix~\ref{sec:app:mva}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Treatment of the Monte-Carlo samples}
@@ -295,14 +275,24 @@ In order to reduce this effect, and when large fluctuations are observed, the ba
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Statistical analysis}
-Hypothesis testing is performed using a modified frequentist method based on a profile likelihood that takes into account the systematic uncertainties as nuisance parameters that are fitted to the expected Monte-Carlo. The full shape information is used, which help from the sidebands to reduce the effect of systematics uncertainties in the signal region.
-\CH{Still need to add more informations}
+Hypothesis testing is performed using a modified frequentist method based on a profile likelihood that takes into account the systematic uncertainties as nuisance parameters that are fitted to the expected Monte-Carlo. The full shape information is used, which help from the sidebands to reduce the effect of systematics uncertainties in the signal region. The test statistic $q_\mu$ is defined as the profile log-likelihood ratio:
+$q_\mu = -2\ln({\cal L}(\mu,\hat{\hat{\theta}}_\mu)/{\cal L}(\hat{\mu},\hat{\theta}))$,
+where $\hat{\mu}$ and $\hat{\theta}$ are the values of the parameters that
+maximise the likelihood function (with the constraint $0\leq \hat{\mu} \leq \mu$),
+and $\hat{\hat{\theta}}_\mu$ are the values of the nuisance parameters that maximise
+the likelihood function for a given value of $\mu$.
+In the absence of any significant deviation from the background expectation,
+$q_\mu$ is used in the CL$_\text{s}$ method~\cite{Junk:1999kv,Read:2002hq} to set an upper limit
+on the signal production cross-section times branching ratio at the 95\% CL. For a given signal scenario,
+values of the production cross-section (parameterised by $\mu$) yielding CL$_\text{s} < 0.05$,
+where CL$_\text{s}$ is computed using the asymptotic approximation~\cite{Cowan:2010js},
+are excluded at 95\% CL. For discovery, 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Di-lepton channels}
 \label{sec:lep}
-
-%Models with extended gauge groups often feature additional U(1) symmetries with corresponding heavy spin-1 bosons. These bosons, generally referred to as $\Zp$, would manifest themselves as a narrow resonance in the dilepton mass spectrum. Among these models are those inspired by Grand Unified Theories, motivated by gauge unification or a restoration of the left-right symmetry violated by the weak interaction. Examples include the $\Zp$ bosons of the E6 motivated theories~\cite{London:1986jz,Joglekar:2016yap,Langacker:2008yv,Hewett:1988xc} and Minimal models~\cite{Salvioni:2009mt}. The Sequential Standard Model (SSM)~\cite{Langacker:2008yv} posits a $\ZpSSM$ boson with couplings to fermions that are identical to those of the Standard Model $\Z$ boson.\CH{This we have already in the introduction, I think we can remove}
 
 The decay products of heavy resonances are in the multi-TeV regime and the capability to reconstruct their momentum imposes stringent requirement on the detector design. In particular, reconstructing the track curvature of multi-TeV muons requires excellent position resolution and a large lever arm. In this section, the expected sensitivity is presented for a \Zpll\ (where $\ell=e,\mu$) and \Zptata\ separately.
 
@@ -378,6 +368,25 @@ The discovery potential for high mass resonances decaying to $\tau\tau$ has been
 
 The decay products are typically in the multi-TeV regime and their reconstruction imposes stringent requirement on the detector design. Precise jet energy resolution requires full longitudinal shower containment. Highly boosted top quarks and $W$ bosons decay into highly collimated jets that need to  be disentangled from standard QCD jets by studying their substructure. High discrimination power and sensitivity for these searches at such extreme energies, requires excellent granularity both in the tracking detectors and calorimeters.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multi-Variate object tagging}
+\label{subsec:mvatagger}
+
+% from physics paper
+An important ingredient of the \Zptt\ and \rsg\ searches is the identification of heavy boosted top quarks and $W$ bosons. Two object level taggers using Boosted Decision Trees (BDT) were developed to discriminate $W$ and top jets against the light jets treated as background.
+Top and $W$ taggers were optimised using jets with a transverse boost of $\pt=$10 TeV. At these extreme energies, $W$ and top jets have a characteristic angular size $R=0.01-0.02$, i.e smaller than the typical electromagnetic and hadronic calorimeter cells. Following the approach described in~\cite{Larkoski:2015yqa}, we exploit the superior track angular resolution and reconstruct jets from tracks only using the anti-$k_T$ algorithm with a parameter R=0.2, but also larger values are used to increase the discrimination power of the BDT. The missing neutral energy is corrected for by rescaling the track 4-momenta by the factor $\ptSub{,trk}/\ptSub{,PF}$, where $\ptSub{,trk}$ is the track Jet \pt\ and $\ptSub{,PF}$ is the Particle-Flow (PF) Jet \pt. In what follows, we will simply refer to ``track jets'' as the jet collection that includes the aforementioned rescaling.
+\newline
+The boosted top tagger is built from jet substructure observables: the soft-dropped jet mass~\cite{Larkoski:2014wba} (\mSD) and N-subjettiness~\cite{Thaler:2010tr} variables $\tau_{1,2,3}$ and their ratios $\tau_{2}/\tau_{1}$ ($\tau_{21}$) and $\tau_{3}/\tau_{2}$ ($\tau_{32}$). The $W$-jet tagger also uses an ``isolation-like'' variable that exploits the absence of high \pt\ final state-radiation (FSR) in the vicinity of the $W$ decay products. We call these variables $E_{F}(n,\alpha)$ and define them as:
+
+%\begin{equation}
+%E_{F}(n,\alpha) =  \frac{\sum \limits_{\frac{n-1}{5}\alpha < \Delta R(k,jet)< \frac{n}{5}\alpha} \ptSup{(k)}}{\sum \limits_{\Delta R(k,jet)< \alpha} \ptSup{(k)}}
+%\end{equation}
+
+\begin{equation}
+E_{F}(n,\alpha) =  \sum \limits_{\frac{n-1}{5}\alpha < \Delta R(k,jet)< \frac{n}{5}\alpha} \ptSup{(k)} \Biggm/ \sum \limits_{\Delta R(k,jet)< \alpha} \ptSup{(k)}
+\end{equation}
+with $k$ running over the jet constituents and $\alpha=0.05$. We construct 5 variables $E_{F}(n,\alpha)$ with $n=[1,2,3,4,5]$ and use them as input to the BDT.
+The $W$ tagging performance has significantly better performance due to the use of the energy-flow variables. We choose the working points for the analyses presented later with a top and $W$ tagging efficiencies of $\epsilon_S^{\text{top}}=60\%$ and $\epsilon_S^{\text{W}}=90\%$ corresponding respectively to a background rejection of $\epsilon_B^{\text{top}}=\epsilon_B^{\text{W}}=90\%$. These working points corresponds to a cut at 0.15 on the BDT value for both taggers. Independent samples have been generated for the training sample and are independent of the one used in the analysis.  More details can be found in Appendix~\ref{sec:app:mva}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The \jj\ final state}
