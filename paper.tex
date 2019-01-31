@@ -41,7 +41,7 @@
 \newcommand{\ZpSSM}{\ensuremath{Z^{\prime}_{\mathrm{SSM}}}}
 \newcommand{\Z}{\ensuremath{Z}}
 \newcommand*{\Zptata}{\ensuremath{Z^{\prime}\rightarrow \tau\tau}}
-\newcommand*{\Zpee}{\ensuremath{Z^{\prime}\rightarrow \text{e e}}}
+\newcommand*{\Zpee}{\ensuremath{Z^{\prime}\rightarrow \text{ee}}}
 \newcommand*{\Zpmumu}{\ensuremath{Z^{\prime}\rightarrow \mu\mu}}
 \newcommand*{\Zpll}{\ensuremath{Z^{\prime}\rightarrow \ell\ell}}
 \newcommand*{\Zptt}{\ensuremath{Z^{\prime} \rightarrow \ttbar}}
@@ -56,8 +56,8 @@
 \newcommand{\mll}{\ensuremath{M_{\ensuremath{ll}}}}
 \newcommand*{\hht}{\ensuremath{H_{\ensuremath{T}}}}
 \newcommand*{\met}{\ensuremath{E_{T}^{\rm{miss}}}}
-\newcommand*{\intlumifcc}{\ensuremath{\mathcal{L}=30\text{ ab}^{-1}}}
-\newcommand*{\intlumihelhc}{\ensuremath{\mathcal{L}=15\text{ ab}^{-1}}}
+\newcommand*{\intlumifcc}{\ensuremath{\mathcal{L}=30\,\text{ab}^{-1}}}
+\newcommand*{\intlumihelhc}{\ensuremath{\mathcal{L}=15\,\text{ab}^{-1}}}
 \newcommand*{\qjj}{\ensuremath{Q^{*} \rightarrow jj}}
 \newcommand*{\rsg}{\ensuremath{G_{RS} \rightarrow W^+W^-}}
 \newcommand*{\vj}{\ensuremath{\text{V + jets}}}
@@ -104,19 +104,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
-Particle accelerators are built to answer some of the most fundamental questions about the natural world. For LHC it was guaranteed that the Standard Model (SM) Higgs boson would be found, for the next generation of machines there is no possibilities to guarantee that any new particle will be discovered. Still with much higher center of mass energies compared to LHC, there are guaranteed deliverables like the study of the Higgs and top-quark properties and exploration of electroweak symmetry breaking phenomena with unmatchable precision and sensitivity.
+Particle accelerators are built to answer some of the most fundamental questions about the natural world. For LHC it was guaranteed that the Standard Model (SM) Higgs boson would be found; however, for the next generation of machines there is no possibility to guarantee that any new particle will be discovered. Still with much higher center of mass energies compared to LHC, there are guaranteed deliverables like the study of the Higgs and top-quark properties and exploration of electroweak symmetry breaking phenomena with unmatchable precision and sensitivity.
 
-New machines are build to make direct discoveries, and even though we do not have any guarantee discoveries, we need to make sure that we will cover a large fraction of Beyond the SM (BSM) phase space. So the mass reach should be increased by a factor of $\sqrt{s}/14$ so 7 for $\sqrt{s}=100$, but there are issues with parton luminosities evolving with $Q^2$, as at high energy they drop a bit faster, so typically it is a factor of 5 increase. But the statistics is enhanced by several orders of magnitudes for many BSM phenomena, that the LHC could barely touch during its exploitation. It is not only that the mass reach increases by a large factor, but it is the fact that if the LHC were to see some hints of possible new physics, by increasing the energy by a factor seven, we would increase the statistics by two or even three orders of magnitude, and we can use this new machine to study with great accuracy what it is about exactly.
-In addition we could have the ability to provide firm answers to questions like: is the SM dynamics all there at the TeV scale, is there a TeV scale solution to the hierarchy problem, is dark matter a thermal wimp (either we discover it as a WIMP, or we discover DM is not a WIMP and it has to be something else), was the cosmological EW phase transition 1st order, etc...
+New machines are built to make direct discoveries, and even though we do not have any guaranted discoveries, we need to make sure that we will cover a large fraction of Beyond the SM (BSM) phase space. Qualitatively, the mass reach should roughly scale by a factor of $\sqrt{s}/14$, so $\sim 7$ for $\sqrt{s}=100$. However, with the parton luminosities evolving with $Q^2$, thus dropping a bit faster at high energy, one typically finds it is only a factor of $\sim 5$ increase. But the statistics are also enhanced by several orders of magnitude for many BSM phenomena, that the LHC could barely touch during its exploitation. It is not only that the mass reach increases by a large factor, but it is the fact that if the LHC were to see some hints of possible new physics, by increasing the energy by a factor seven, we would increase the statistics by two or even three orders of magnitude, and we can use this new machine to study with great accuracy what it is that has been found. In addition we could have the ability to provide firm answers to questions such as: is the SM dynamics all there at the TeV scale, is there a TeV scale solution to the hierarchy problem, is dark matter a thermal wimp (either we discover it as a WIMP, or we discover DM is not a WIMP and it has to be something else), was the cosmological EW phase transition 1st order, etc...
 
-Concerning the topic of this paper, the discovery potential of new resonances not predicted by the SM makes Future Circular Colliders (FCC) to be the only  place to search for such heavy particles, compared to the current LHC and coming HL-LHC.
-In the framework of FCC it is also extremely relevant to discuss the main limitations of the detector to identify high energetic top-quarks or W/Z bosons. Indeed 100\,TeV proton-proton collisions will produce a very large amount of multi-TeV's bosons or top, thus the design of the detector needs detailed optimisations in order to achieve the required physics goals. The capabilities of such a detector should include the capabilities of measuring multi-TeV leptons, top-quarks and bosons, and will be discussed in this paper.
+Concerning the topic of this paper, the discovery potential for new resonances not predicted by the SM makes Future Circular Colliders (FCC) the only place to search for such heavy particles, compared to the current LHC and the coming HL-LHC.
+In the framework of FCC it is also extremely relevant to discuss the main limitations of the detector in identifying high energetic top-quarks or W/Z bosons. Indeed 100\,TeV proton-proton collisions will produce very large quantities of multi-TeV's bosons or top, thus the design of the detector needs detailed optimisations in order to achieve the required physics goals. The capabilities of such a detector should include the capabilities of measuring multi-TeV leptons, top-quarks and bosons, and will be discussed in this paper.
 
-This document presents the expectations of some of the most relevant BSM scenarios and the considered models are detailed in the section~\ref{sec:bsmmodels}.
-Details on the generators, detector parametrisation, statistical methods and other analysis techniques developed are presented in the section~\ref{sec:simulation}.
+This document presents the expectations of some of the most relevant BSM scenarios and the considered models are discussed in the section~\ref{sec:bsmmodels}.
+Details on the generators, detector parameterization, statistical methods and other analysis techniques developed are presented in the section~\ref{sec:simulation}.
 The leptonic resonances ($ee$, $\mu\mu$, $\tau\tau$) and the hadronic resonances (WW, $t\bar{t}$ and jj) analyses are detailed in sections~\ref{sec:lep} and~\ref{sec:hadronic} respectively.
 The analyses strategy started from optimisation at FCC-hh, but the results have also been extracted in the case of the HE-LHC scenario and are summarised in section~\ref{sec:ana27tev}.
-Finally, a study of model discrimination at HE-LHC in case of discovery at the end of HL-HLC is presented in section~\ref{sec:zprimedisc}.
+Finally, a study of model discrimination at HE-LHC in case of discovery at the end of HL-LHC run is presented in section~\ref{sec:zprimedisc}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{BSM Models}
@@ -223,8 +222,7 @@ controls the overall coupling strength to all of the various SM particles.
 \subsection{Monte-Carlo production}
 \label{subsec:mcprod}
 
-Monte Carlo~(MC) simulated event samples are used to simulate the response of the detector to signal and backgrounds. Signals are generated with \py~\cite{Sjostrand:2014zea} version v8.201 with the \pdf{NNPDF2\!.\!3NNLO} PDF set~\cite{Ball:2014uwa} using the leading order cross-section from the generator with no k-factor. 
-The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$,  were generated using \MGAMC~\cite{Alwall:2014hca} v2.3.3 at leading order only with the XXX PDF set in bins of $\hht$. A k-factor of 2 is applied to all the background processes to account for higher order corrections.
+Monte Carlo~(MC) simulated event samples are used to simulate the response of the detector to signal and backgrounds. Signals are generated with \py~\cite{Sjostrand:2014zea} version v8.201 with the \pdf{NNPDF2\!.\!3NNLO} PDF set~\cite{Ball:2014uwa} using the leading order cross-section from the generator with no k-factor. The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$,  were generated using \MGAMC~\cite{Alwall:2014hca} v2.5.5 at leading order only with the \pdf{NNPDF3\!.\!0NLO}~\cite{Ball:2014uwa} PDF set in bins of $\hht$. A k-factor of 2 is applied to all the background processes to account for higher order corrections.
 
 
 
@@ -275,18 +273,7 @@ In order to reduce this effect, and when large fluctuations are observed, the ba
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Statistical analysis}
-Hypothesis testing is performed using a modified frequentist method based on a profile likelihood that takes into account the systematic uncertainties as nuisance parameters that are fitted to the expected Monte-Carlo. The full shape information is used, which help from the sidebands to reduce the effect of systematics uncertainties in the signal region. The test statistic $q_\mu$ is defined as the profile log-likelihood ratio:
-$q_\mu = -2\ln({\cal L}(\mu,\hat{\hat{\theta}}_\mu)/{\cal L}(\hat{\mu},\hat{\theta}))$,
-where $\hat{\mu}$ and $\hat{\theta}$ are the values of the parameters that
-maximise the likelihood function (with the constraint $0\leq \hat{\mu} \leq \mu$),
-and $\hat{\hat{\theta}}_\mu$ are the values of the nuisance parameters that maximise
-the likelihood function for a given value of $\mu$.
-In the absence of any significant deviation from the background expectation,
-$q_\mu$ is used in the CL$_\text{s}$ method~\cite{Junk:1999kv,Read:2002hq} to set an upper limit
-on the signal production cross-section times branching ratio at the 95\% CL. For a given signal scenario,
-values of the production cross-section (parameterised by $\mu$) yielding CL$_\text{s} < 0.05$,
-where CL$_\text{s}$ is computed using the asymptotic approximation~\cite{Cowan:2010js},
-are excluded at 95\% CL. For discovery, 
+Hypothesis testing is performed using a modified frequentist method based on a profile likelihood that takes into account the systematic uncertainties as nuisance parameters that are fitted to the expected Monte-Carlo. The full shape information is used, which help from the sidebands to reduce the effect of systematics uncertainties in the signal region. The test statistic $q_\mu$ is defined as the profile log-likelihood ratio: $q_\mu = -2\ln({\cal L}(\mu,\hat{\hat{\theta}}_\mu)/{\cal L}(\hat{\mu},\hat{\theta}))$, where $\hat{\mu}$ and $\hat{\theta}$ are the values of the parameters that maximise the likelihood function (with the constraint $0\leq \hat{\mu} \leq \mu$), and $\hat{\hat{\theta}}_\mu$ are the values of the nuisance parameters that maximise the likelihood function for a given value of $\mu$. In the absence of any significant deviation from the background expectation, $q_\mu$ is used in the CL$_\text{s}$ method~\cite{Junk:1999kv,Read:2002hq} to set an upper limit on the signal production cross-section times branching ratio at the 95\% CL. For a given signal scenario, values of the production cross-section (parameterised by $\mu$) yielding CL$_\text{s} < 0.05$, where CL$_\text{s}$ is computed using the asymptotic approximation~\cite{Cowan:2010js}, are excluded at 95\% CL. For a $5\sigma$ discovery, the quantity 1-CL$_\text{b}$ must be smaller than $2.87 \cdot 10^{-7}$~\cite{Junk:1999kv} and is again computed using the asymptotic approximation.
 
 
 
@@ -301,36 +288,31 @@ The decay products of heavy resonances are in the multi-TeV regime and the capab
 \label{sec:lepee}
 
 Events are required to contain two isolated opposite sign leptons with $\pt > 1$\,TeV, $|\eta|$<4 and an invariant mass $\mll > 2.5$\,TeV.
-Figure~\ref{figure:leptonicresonances:ll} (top) shows the invariant mass for a 30\,TeV \ZpSSM\ signal for the $ee$ (left) and $\mu\mu$ (right) channels. The mass resolution is better for the $ee$ channel, as expected from calorimeter constant term. Event yields can be found in Appendix~\ref{app:yields}
+Figure~\ref{figure:leptonicresonances:ll} (top) shows the invariant mass for a 30\,TeV \ZpSSM\ signal for the $ee$ (left) and $\mu\mu$ (right) channels. The mass resolution is better for the $ee$ channel, as expected from calorimeter constant term that dominates the resolution at high \pt. Event yields can be found in Appendix~\ref{app:yields}.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.35\columnwidth]{Fig/mzp_sel0_nostack_log_ee.eps}
   \includegraphics[width=0.35\columnwidth]{Fig/mzp_sel0_nostack_log_mm.eps}
-   \includegraphics[width=0.35\columnwidth]{Fig/lim_Zprime_ll_fcc_v02_allxs.eps}
+  \includegraphics[width=0.35\columnwidth]{Fig/lim_Zprime_ll_fcc_v02_allxs.eps}
   \includegraphics[width=0.35\columnwidth]{Fig/DiscoveryPotential_ll_comb_rootStyle.eps}
-  \caption{Top: Invariant mass for a 30~TeV signal after full event selection for $ee$ channel (left) and $\mu\mu$ channel (right).
-  Bottom: Limit versus mass for the combined di-lepton ($ee$, $\mu\mu$) channel (left) and luminosity for a $5\sigma$ discovery (right) comparing ee,$\mu\mu$ and combined channels.}
+  \caption{Top: Invariant mass for a 30\,TeV signal after full event selection for $ee$ channel (left) and $\mu\mu$ channel (right).
+  Bottom: Limit versus mass for the combined di-lepton ($ee$, $\mu\mu$) channel (left) and luminosity for a $5\sigma$ discovery (right) comparing ee, $\mu\mu$ and combined channels.}
   \label{figure:leptonicresonances:ll}
 \end{figure}
 
 The di-lepton invariant mass spectrum is used as the discriminant and a 50\% normalisation uncertainty on the background normalisation is assumed.
-Figure~\ref{figure:leptonicresonances:ll} shows the exclusion limit obtained \intlumifcc\ of data for the $ee$ alone (top left), $\mu\mu$ alone (top right) and combination of (ee,$\mu\mu$) channels (bottom left). Figure~\ref{figure:leptonicresonances:ll} (bottom right) shows the integrated luminosity required to reach a $5\sigma$ discovery as a function of the mass of the heavy resonance. The \Zpee\ and \Zpmumu\ channel display very similar performance, due to the low background rates. We conclude therefore that the reference detector design features near to optimal performance for searches involving high \pt\ muon final states.
-
-The discovery potential for high mass resonances decaying to $ee$, $\mu\mu$ has been studied using as a benchmark the \ZpSSM\ model. The very large centre of mass energy provides a correspondingly large mass reach. For the $ee$ and $\mu\mu$ cases masses up to 42~TeV can be excluded or discovered.
-The limits for $ee$ and $\mu\mu$ alone can be found in Appendix~\ref{app:anamore}.
+Figure~\ref{figure:leptonicresonances:ll} (bottom left) shows the 95\% CL exclusion limit obtained with 30\,ab$^{-1}$ of data combining ee and $\mu\mu$ channels. Figure~\ref{figure:leptonicresonances:ll} (bottom right) shows the integrated luminosity required to reach a $5\sigma$ discovery as a function of the mass of the heavy resonance. The \Zpee\ and \Zpmumu\ channel display very similar performance due to the low background rates. We conclude therefore that the reference detector design features near to optimal performance for searches involving high \pt\ muon final states. Combining $ee$ and $\mu\mu$ channels, masses up to 42\,TeV can be excluded or discovered. The limits for $ee$ and $\mu\mu$ alone can be found in Appendix~\ref{app:anamore}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The \texorpdfstring{\tautau}{tautau} final state}
 \label{sec:leptautau}
 
-At current LHC\CH{add ref}, the most sensitive channel to search for high mass di-$\tau$ resonances is the fully hadronic, and in the following this is what will be considered.
-The event selection requires two jets with $p_{T} > 0.5$\,TeV and $|\eta|<2.5$, both identified as $\tau$'s. To ensure no overlap between the $\ell$ and $\tau$ final states, jets containing leptons with $\pt > 100$\,GeV are vetoed. Finally, requirements of $\Delta \phi(\tau_1, \tau_2)> 2$ and $2.5<\Delta R(\tau_1, \tau_2)<4$ are applied to suppress multi-jet background.
-Furthermore, mass dependent cuts are applied to maximise the signal significance and are summarised in Table~\ref{tab:leptonicresonances:tautau}. Figure~\ref{figure:leptonicresonances:tautau} (right) shows the transverse mass~\footnote{the transverse mass is defined as $m_{T}  =  \sqrt{2\ptZp*\met*(1-cos\Delta\phi(\Zp,\met))} $}
-of a 10\,TeV signal. Several proxies for the true resonance mass have been tested, such as the invariant mass of the two $\tau$'s, with and without correction for the missing energy, but the transverse mass provided the best sensitivity and is therefore used to estimate the sensitivity.
+At current LHC~\cite{Khachatryan:2016qkc}, the most sensitive channel to search for high mass di-$\tau$ resonances is when both $\tau$ leptons decays hadronically. This is the focus of the analysis presented in this section.
+The event selection requires two jets with $p_{T} > 0.5$\,TeV and $|\eta|<2.5$, both identified as $\tau$'s. To ensure no overlap between the $\ell=e,\mu$ and $\tau$ final states, jets containing an electron or a muon with $\pt > 100$\,GeV are vetoed. Finally, requirements of $\Delta \phi(\tau_1, \tau_2)> 2$ and $2.5<\Delta R(\tau_1, \tau_2)<4$ are applied to suppress multi-jet background.
+Furthermore, mass dependent cuts are applied to maximise the signal significance and are summarised in Table~\ref{tab:leptonicresonances:tautau}. Several proxies for the true resonance mass have been tested, such as the invariant mass of the two $\tau$'s, with and without correction for the missing energy, but the transverse mass~\footnote{the transverse mass is defined as $m_{T}  =  \sqrt{2\ptZp*\met*(1-cos\Delta\phi(\Zp,\met))} $} provided the best sensitivity and is therefore used to estimate the sensitivity.
 
-Figure~\ref{figure:leptonicresonances:tautau} shows the di-$\tau$ transverse mass (left) for a 10\,TeV \ZpSSM, the exclusion limits for 30 ab$^{-1}$ of data (middle) and the required integrated luminosity versus mass of the resonance to reach a $5\sigma$ discovery (right).
-The discovery potential for high mass resonances decaying to $\tau\tau$ has been studied using as a benchmark the \ZpSSM\ model. The very large centre of mass energy provides a correspondingly large mass reach. Heavy resonance decaying to $\tau$ leptons reconstructed in the hadronic decay mode are more challenging, but we would be able to probe masses up to 18\,TeV.
+Figure~\ref{figure:leptonicresonances:tautau} shows the di-$\tau$ transverse mass (left) for a 10\,TeV \ZpSSM. The 95\% CL exclusion limits for 30\,ab$^{-1}$ of data (middle) and the required integrated luminosity versus mass of the resonance to reach a $5\sigma$ discovery (right). Heavy resonance decaying to $\tau$ leptons reconstructed in the hadronic decay mode are more challenging given the overwhelming multi-jet background, but masses up to 18\,TeV could be probed.
 
 \begin{table}[htbp]
    \centering
@@ -366,14 +348,14 @@ The discovery potential for high mass resonances decaying to $\tau\tau$ has been
 \section{Hadronic final states}
 \label{sec:hadronic}
 
-The decay products are typically in the multi-TeV regime and their reconstruction imposes stringent requirement on the detector design. Precise jet energy resolution requires full longitudinal shower containment. Highly boosted top quarks and $W$ bosons decay into highly collimated jets that need to  be disentangled from standard QCD jets by studying their substructure. High discrimination power and sensitivity for these searches at such extreme energies, requires excellent granularity both in the tracking detectors and calorimeters.
+Heavy resonances decaying hadronically also imposes stringent requirement on the detector design. For instance,  precise jet energy resolution requires full longitudinal shower containment and highly boosted top quarks and $W$ bosons decay into highly collimated jets that need to  be disentangled from standard QCD jets by studying their substructure. High discrimination power and sensitivity for these searches at such extreme energies, requires excellent granularity both in the tracking detectors and calorimeters.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Multi-Variate object tagging}
 \label{subsec:mvatagger}
 
 % from physics paper
-An important ingredient of the \Zptt\ and \rsg\ searches is the identification of heavy boosted top quarks and $W$ bosons. Two object level taggers using Boosted Decision Trees (BDT) were developed to discriminate $W$ and top jets against the light jets treated as background.
+An important ingredient of the hadronic searches is the identification of heavy boosted top quarks and $W$ bosons. Two object level taggers using Boosted Decision Trees (BDT) were developed to discriminate $W$ and top jets against the light jet flavours treated as background.
 Top and $W$ taggers were optimised using jets with a transverse boost of $\pt=$10 TeV. At these extreme energies, $W$ and top jets have a characteristic angular size $R=0.01-0.02$, i.e smaller than the typical electromagnetic and hadronic calorimeter cells. Following the approach described in~\cite{Larkoski:2015yqa}, we exploit the superior track angular resolution and reconstruct jets from tracks only using the anti-$k_T$ algorithm with a parameter R=0.2, but also larger values are used to increase the discrimination power of the BDT. The missing neutral energy is corrected for by rescaling the track 4-momenta by the factor $\ptSub{,trk}/\ptSub{,PF}$, where $\ptSub{,trk}$ is the track Jet \pt\ and $\ptSub{,PF}$ is the Particle-Flow (PF) Jet \pt. In what follows, we will simply refer to ``track jets'' as the jet collection that includes the aforementioned rescaling.
 \newline
 The boosted top tagger is built from jet substructure observables: the soft-dropped jet mass~\cite{Larkoski:2014wba} (\mSD) and N-subjettiness~\cite{Thaler:2010tr} variables $\tau_{1,2,3}$ and their ratios $\tau_{2}/\tau_{1}$ ($\tau_{21}$) and $\tau_{3}/\tau_{2}$ ($\tau_{32}$). The $W$-jet tagger also uses an ``isolation-like'' variable that exploits the absence of high \pt\ final state-radiation (FSR) in the vicinity of the $W$ decay products. We call these variables $E_{F}(n,\alpha)$ and define them as:
@@ -386,21 +368,20 @@ The boosted top tagger is built from jet substructure observables: the soft-drop
 E_{F}(n,\alpha) =  \sum \limits_{\frac{n-1}{5}\alpha < \Delta R(k,jet)< \frac{n}{5}\alpha} \ptSup{(k)} \Biggm/ \sum \limits_{\Delta R(k,jet)< \alpha} \ptSup{(k)}
 \end{equation}
 with $k$ running over the jet constituents and $\alpha=0.05$. We construct 5 variables $E_{F}(n,\alpha)$ with $n=[1,2,3,4,5]$ and use them as input to the BDT.
-The $W$ tagging performance has significantly better performance due to the use of the energy-flow variables. We choose the working points for the analyses presented later with a top and $W$ tagging efficiencies of $\epsilon_S^{\text{top}}=60\%$ and $\epsilon_S^{\text{W}}=90\%$ corresponding respectively to a background rejection of $\epsilon_B^{\text{top}}=\epsilon_B^{\text{W}}=90\%$. These working points corresponds to a cut at 0.15 on the BDT value for both taggers. Independent samples have been generated for the training sample and are independent of the one used in the analysis.  More details can be found in Appendix~\ref{sec:app:mva}
+The $W$ tagging performance has significantly better performance due to the good discrimination power of the energy-flow variables. We choose the working points for the analyses presented later with a top and $W$ tagging efficiencies of $\epsilon_S^{\text{top}}=60\%$ and $\epsilon_S^{\text{W}}=90\%$ corresponding respectively to a background rejection of $\epsilon_B^{\text{top}}=\epsilon_B^{\text{W}}=90\%$. These working points corresponds to a cut at 0.15 on the BDT value for both taggers. Independent samples have been generated for training the BDT and there is no overlap with the one used in the analysis.  More details can be found in Appendix~\ref{sec:app:mva}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The \jj\ final state}
 \label{sec:hadjj}
 
-Jets are clustered using particle-flow candidates with the anti-$k_T$~\cite{Cacciari:2008gp} algorithm with parameter R=0.4. We require at least two jets with $\pt$>3~TeV and $|\eta<3|$ and the rapidity difference between the two leading jets to be small, $\Delta(\eta)<1.5$ as di-jet events will tend to be more central. The dijet invariant mass of the \qjj\ signal for $m_Q^{*}$ and QCD contributions after the full event selection is shown in Figure~\ref{figure:hadronicresonances:jj} (left).
-For the \qjj\ masses up to 40~TeV could be discovered with \intlumifcc.
+Jets are clustered using particle-flow candidates with the anti-$k_T$~\cite{Cacciari:2008gp} algorithm and  parameter R=0.4. We require at least two very energetic jets with $\pt$>3\,TeV and $|\eta|<3$. As di-jet events from signal will tend to be more central than for background, the rapidity difference between the two leading jets $\Delta(\eta_1, \eta_2)$ is required to be smaller than 1.5. The di-jet invariant mass for the \qjj\ signal with a mass of 40\,TeV and the QCD contribution after the full event selection is shown on Figure~\ref{figure:hadronicresonances:jj} (left). The middle Figure shows the 95\% CL exclusion limit obtained with 30\,ab$^{-1}$ of data and the right Figure shows the integrated luminosity required to reach a $5\sigma$ discovery as a function of the Q$^*$ mass.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.32\columnwidth]{Fig/Mj1j2_pf04_sel1_nostack_log.eps}
   \includegraphics[width=0.32\columnwidth]{Fig/lim_Qstar_jj_fcc_v02.eps}
  \includegraphics[width=0.32\columnwidth]{Fig/DiscoveryPotential_jj_rootStyle.eps}
-   \caption{Invariant mass distribution of the two selected jets for a 40~TeV signal (left), limit versus mass (middle) and $5\sigma$ discovery reach.\MS{need editing / style}}
+   \caption{Invariant mass distribution of the two selected jets for a 40\,TeV signal (left), limit versus mass (middle) and $5\sigma$ discovery reach.\MS{need editing / style}}
   \label{figure:hadronicresonances:jj}
 \end{figure}
 
@@ -408,16 +389,15 @@ For the \qjj\ masses up to 40~TeV could be discovered with \intlumifcc.
 \subsection{The \texorpdfstring{\ttbar}{tt} final state}
 \label{sec:hadtt}
 
-As track jets are better able to resolve the jet sub-structure compared to particle-flow jets, the jet selection for the \rsg\ and \Zptt\ searches using track jets. As no lepton veto is applied, there is also some acceptance for leptonic decays. The sensitivity to semi-leptonic $WW$ or \ttbar\ decays is enhanced by adding the $\metvec$ vector to the closest jet 4-momentum (among the to leading jets).
-
-We require two jets with a $\pt$>3~TeV and $|\eta<3|$ and $\Delta(\eta)<2.4$. Both jets must either be $W$ or top tagged (section~\ref{subsec:mvatagger}) by requiring multivariate tagger > 0.15. Both high-\pt\ jets must be $b$-tagged for the \Zptt\ analysis. Finally, to further reject QCD, we require for both jets $m_{SD}>40$~GeV. In Figure~\ref{figure:hadronicresonances:tt} we show the di-jet invariant mass distribution after the final cuts for the \rsg\ (center) and \Zptt\ (right) analyses respectively.
-
+As track jets are found to better resolve the jet sub-structure compared to particle-flow jets, the selection for the \rsg\ and \Zptt\ searches is using track jets. As no lepton veto is applied, there is also some acceptance for leptonic decays and the sensitivity to semi-leptonic $WW$ or \ttbar\ decays is enhanced by adding the $\metvec$ vector to the closest jet 4-momentum (among the two leading jets).
+We require two jets with a $\pt$>3\,TeV and $|\eta|<3$ and $\Delta(\eta_1,\eta_2)<2.4$. Both jets must either be $W$ or top tagged (section~\ref{subsec:mvatagger}) by requiring multivariate tagger score larger than 0.15. In addition, high-\pt\ jets must be $b$-tagged for the \Zptt\ analysis. Finally, to further reject QCD, we require for both jets the soft-dropped mass to be larger than 40\,GeV. Figure~\ref{figure:hadronicresonances:tt} (right) shows the di-top invariant mass distribution after the final cuts for a 20\,TeV signal. Thanks to the BDT discriminant, the largest background contribution is top pair production. The middle Figure shows the 95\% CL exclusion limit obtained with 30\,ab$^{-1}$ of data and the right Figure shows the integrated luminosity required to reach a $5\sigma$ discovery as a function of the Z$^\prime$ mass.
+Further developments to improve the mass resolution could be considered to improve the sensitivity, but already with such wide spectrum, 
 \begin{figure}[!htb]
   \centering
    \includegraphics[width=0.32\columnwidth]{Fig/Mj1j2_pf08_MetCorr_fit_sel8_nostack_log.eps}
-   \includegraphics[width=0.32\columnwidth]{Fig/DiscoveryPotential_tt_SSM_TC2_tagger_TRFbtag_rootStyle.eps}
    \includegraphics[width=0.32\columnwidth]{Fig/lim_Zprime_tt_fcc_v02.eps}
-  \caption{Invariant mass distribution of the two leading jets for the pre-selection (left) and full selection (right) for a 40~TeV signal for the \qjj\ (left), and a 20~TeV signal for \rsg\ (center) and \Zptt\ (right) analyses.\MS{need editing / style}}
+   \includegraphics[width=0.32\columnwidth]{Fig/DiscoveryPotential_tt_SSM_TC2_tagger_TRFbtag_rootStyle.eps}
+  \caption{Invariant mass distribution of the two leading jets for the pre-selection (left) and full selection (right) for a 40\,TeV signal for the \qjj\ (left), and a 20\,TeV signal for \rsg\ (center) and \Zptt\ (right) analyses.\MS{need editing / style}}
   \label{figure:hadronicresonances:tt}
 \end{figure}
 
@@ -426,14 +406,14 @@ We require two jets with a $\pt$>3~TeV and $|\eta<3|$ and $\Delta(\eta)<2.4$. Bo
 \subsection{The \texorpdfstring{\ww}{ww} final state}
 \label{sec:hadww}
 
-The expected exclusion limits at 95\% CL are shown in Figures~\ref{figure:hadronicresonances:ww}. For the \qjj\ masses up to 40~TeV could be discovered with \intlumifcc. Reconstructing Heavy resonances decaying to $WW$ and \ttbar\ is more challenging and requires the use of novel approaches to boosted object tagging to reduce the backgrounds. The reach for \Zptt\ (in TC2 models) and \rsg\ is 24~TeV and 22~TeV respectively and it is possible to discover a $Z^{\prime}_{SSM} \rightarrow \ttbar$ up to $m_{Z}=18$~TeV.
+The expected exclusion limits at 95\% CL are shown in Figures~\ref{figure:hadronicresonances:ww}. For the \qjj\ masses up to 40\,TeV could be discovered with \intlumifcc. Reconstructing Heavy resonances decaying to $WW$ and \ttbar\ is more challenging and requires the use of novel approaches to boosted object tagging to reduce the backgrounds. The reach for \Zptt\ (in TC2 models) and \rsg\ is 24\,TeV and 22\,TeV respectively and it is possible to discover a $Z^{\prime}_{SSM} \rightarrow \ttbar$ up to $m_{Z}=18$\,TeV.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.32\columnwidth]{Fig/Mj1j2_pf08_fit_sel4_nostack_log.eps}
   \includegraphics[width=0.32\columnwidth]{Fig/lim_RSGraviton_ww_fcc_v02.eps}
   \includegraphics[width=0.32\columnwidth]{Fig/DiscoveryPotential_ww_tagger_rootStyle.eps}
-  \caption{Invariant mass distribution of the two leading jets for the pre-selection (left) and full selection (right) for a 40~TeV signal for the \qjj\ (left), and a 20~TeV signal for \rsg\ (center) and \Zptt\ (right) analyses.\MS{need editing / style}}
+  \caption{Invariant mass distribution of the two leading jets for the pre-selection (left) and full selection (right) for a 40\,TeV signal for the \qjj\ (left), and a 20\,TeV signal for \rsg\ (center) and \Zptt\ (right) analyses.\MS{need editing / style}}
   \label{figure:hadronicresonances:ww}
 \end{figure}
 
@@ -511,12 +491,12 @@ analysis   & \multicolumn{3}{c|}{HE-LHC (FCC-hh)} \\
 %\subsection{Context of the study}
 \paragraph*{Context of the study}
 It is still legitimate to assume that a heavy resonance could be seen at the end of HL-HLC. If that is the case a new collider with higher energy
-in the \com is needed to study its properties as too few events will be available at \sqrtslhc. In this section we present the discrimination potential between six $Z'$ models of a High Energy LHC (HE-LHC) with an assumed \com energy of 27~TeV and an integrated luminosity of \intlumihelhc. Under the assumption that these $Z'$'s decay only to SM particles, we show that there are sufficient observables to perform this model differentiation in most cases.
+in the \com is needed to study its properties as too few events will be available at \sqrtslhc. In this section we present the discrimination potential between six $Z'$ models of a High Energy LHC (HE-LHC) with an assumed \com energy of 27\,TeV and an integrated luminosity of \intlumihelhc. Under the assumption that these $Z'$'s decay only to SM particles, we show that there are sufficient observables to perform this model differentiation in most cases.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsection{Bounds from HL-LHC}
 \paragraph*{Bounds from HL-LHC}
-As a starting point it is needed to estimate what are, for $\sqrt s=14$ TeV, the typical exclusion/discovery reaches for standard reference $Z'$ models assuming \intlumihllhc\ employing only the $e^+e^-$ and $\mu^+\mu^-$ channels. To address this and the other questions below we will use the same set of $Z'$ models as employed
+As a starting point it is needed to estimate what are, for $\sqrt s=14$\,TeV, the typical exclusion/discovery reaches for standard reference $Z'$ models assuming \intlumihllhc\ employing only the $e^+e^-$ and $\mu^+\mu^-$ channels. To address this and the other questions below we will use the same set of $Z'$ models as employed
 in Ref.~\cite{Rizzo:2014xma} and mostly in Ref.~\cite{Han:2013mra}, both of which we will refer to frequently. We employ the MMHT2014 NNLO PDF set~\cite{Harland-Lang:2014zoa}
 throughout with an appropriate constant $K$-factor (=1.27) to account for higher order QCD corrections. The production cross section times leptonic branching fraction is shown in Figure~\ref{fig:pheno:toy} (left) for these models at \sqrtslhc\ in the narrow width approximation (NWA). It has been and will be assumed here that these $Z'$ states only decay to SM particles.
 
@@ -525,14 +505,14 @@ throughout with an appropriate constant $K$-factor (=1.27) to account for higher
   \centering
     \includegraphics[trim={2cm 2cm 2cm 2cm},clip,width=0.45\columnwidth]{Fig/zp14tev-ref.pdf}
     \includegraphics[trim={2cm 2cm 2cm 2cm},clip,width=0.45\columnwidth]{Fig/zp27tev-ref.pdf}
-    \caption{Left: $\sigma B_l$ in the NWA for the $Z'$ production at the $\sqrt s=14$ TeV LHC as functions of the $Z'$ mass: SSM(red), LRM (blue), $\psi$(green), $\chi$(magenta),
-$\eta$(cyan), I(yellow). (Right) $\sigma B_l$ of $Z'$ in models described in (left) at $\sqrt s=27$ TeV.}
+    \caption{Left: $\sigma B_l$ in the NWA for the $Z'$ production at the $\sqrt s=14$\,TeV LHC as functions of the $Z'$ mass: SSM(red), LRM (blue), $\psi$(green), $\chi$(magenta),
+$\eta$(cyan), I(yellow). (Right) $\sigma B_l$ of $Z'$ in models described in (left) at $\sqrt s=27$\,TeV.}
 \label{fig:pheno:toy}
 \end{figure}
 
-Using the present ATLAS and CMS results at 13 TeV,~\cite{Aaboud:2017buh} and~\cite{Sirunyan:2018exx}, it is straightforward to estimate by extrapolation the
-exclusion reach at \sqrtslhc\ using the combined $ee+\mu\mu$ final states. This is given in the first column of Table~\ref{tab:pheno:spec}. For discovery, only the $ee$ channel is used due to poor $\mu\mu$-pair invariant mass resolution near $M_{Z'}=6$ TeV. Estimates of the $3\sigma$ evidence and $5\sigma$
-discovery limits are also given in Table~\ref{tab:pheno:spec}. Based on these results, we will assume in our study below that we are dealing with a $Z'$ of mass 6 TeV. Figure~\ref{fig:pheno:toy} (right) shows the NWA cross sections for the same set of models but now at \sqrtshelhc\ with \intlumihelhc. We note that very large statistical samples will be available for the case of $M_{Z'}=6$ TeV
+Using the present ATLAS and CMS results at 13\,TeV,~\cite{Aaboud:2017buh} and~\cite{Sirunyan:2018exx}, it is straightforward to estimate by extrapolation the
+exclusion reach at \sqrtslhc\ using the combined $ee+\mu\mu$ final states. This is given in the first column of Table~\ref{tab:pheno:spec}. For discovery, only the $ee$ channel is used due to poor $\mu\mu$-pair invariant mass resolution near $M_{Z'}=6$\,TeV. Estimates of the $3\sigma$ evidence and $5\sigma$
+discovery limits are also given in Table~\ref{tab:pheno:spec}. Based on these results, we will assume in our study below that we are dealing with a $Z'$ of mass 6\,TeV. Figure~\ref{fig:pheno:toy} (right) shows the NWA cross sections for the same set of models but now at \sqrtshelhc\ with \intlumihelhc. We note that very large statistical samples will be available for the case of $M_{Z'}=6$\,TeV
 for each dilepton channel.
 
 %
@@ -573,12 +553,12 @@ where $y_1=0.5$ and $y_2=2.5$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph*{Model discrimination}
 
-The model discrimination presented in this section has been performed assuming the HE-LHC detector parametrisation~\cite{hlhelhc_web} in \delphes~\cite{deFavereau:2013fsa}. In such a detector, muons at $\eta \approx 0$ are assumed to be reconstructed with a resolution $\sigma(p)/p \approx 7\%$ for $\pt~=~3 $~TeV.
+The model discrimination presented in this section has been performed assuming the HE-LHC detector parametrisation~\cite{hlhelhc_web} in \delphes~\cite{deFavereau:2013fsa}. In such a detector, muons at $\eta \approx 0$ are assumed to be reconstructed with a resolution $\sigma(p)/p \approx 7\%$ for $\pt~=~3$\,TeV.
 
 \subparagraph*{Leptonic final states}
 \label{par:lepana}
 
-The potential for discriminating various $Z'$ models is first investigated using the leptonic $ee$ and $\mu\mu$ final states only. The signal samples for the 6 models and the Drell-Yan backgrounds have been generated with \py~\cite{Sjostrand:2014zea} including the interference between the signal and background. The $Z'$ decays assume lepton flavour universality. For a description of the event selection and a discussion of the discovery potential in leptonic final states for the list of $Z'$ models being discussed here, the reader should refer to Section~\ref{sec:lep}. We simply point out here that with \intlumihelhc\,, all $Z'$ models with $m_{Z'}~\lesssim~10$~TeV can be excluded at \sqrtshelhc.
+The potential for discriminating various $Z'$ models is first investigated using the leptonic $ee$ and $\mu\mu$ final states only. The signal samples for the 6 models and the Drell-Yan backgrounds have been generated with \py~\cite{Sjostrand:2014zea} including the interference between the signal and background. The $Z'$ decays assume lepton flavour universality. For a description of the event selection and a discussion of the discovery potential in leptonic final states for the list of $Z'$ models being discussed here, the reader should refer to Section~\ref{sec:lep}. We simply point out here that with \intlumihelhc\,, all $Z'$ models with $m_{Z'}~\lesssim~10$\,TeV can be excluded at \sqrtshelhc.
 
 Figure~\ref{fig:ana:res} (left) shows the correlated predictions for the $A_{FB}$ and the rapidity ratio $r_y$ observables defined previously for these six models given the above assumptions. Although the interference with the SM background was included in the simulation, its effect is unimportant due to the narrowness of the mass window around the resonance that was employed. Furthermore, the influence of the background uncertainty on the results has been found to have little to no impact on the model discrimination potential. Therefore the displayed errors on $A_{FB}$ and $r_y$ are of statistical origin only. The results show that apart from a possible near degeneracy in models $\psi$ and $\eta$, a reasonable $Z'$ model separation can indeed be achieved.
 
@@ -603,7 +583,7 @@ Model discrimination can be improved by including an analysis involving three $Z
 Figure~\ref{fig:ana:res} (right) summarises the discrimination potential in terms of fitted cross-section of the different models considering the three aforementionned hadronic decays, $t\bar{t}$,  $b\bar{b}$ and $q\bar{q}$. An good overall discrimination among the various models can be achieved using all possible final states. For example, the SSM and $\psi$ models, which have very close predictions for $r_y$ and $A_{FB}$, have measurably different fractions of $t\bar{t}$ or $b\bar{b}$ final states. We note however that the degeneracy between $\eta$ and $\psi$ can only be partially resolved resolved at $\approx~1~\sigma$ by exploiting the difference in $t\bar{t}$ yield.
 
 \paragraph*{Conclusion}
-In this section we studied the discrimination potential of six $Z'$ models at High Energy LHC (HE-LHC) with an assumed \com energy of 27~TeV and an integrated luminosity of \intlumihelhc. The exercise has been performed assuming the evidence of an excess observed at \sqrtslhc\ at a mass $m_{Z'}\approx~6$~TeV. Overall it was found that it is possible to distinguish among most models. Finally, it should be noted that further studies, perhaps employing 3-body decay modes or associated Z' production will be clearly in case of discovery to further characterize the resonance properties.
+In this section we studied the discrimination potential of six $Z'$ models at High Energy LHC (HE-LHC) with an assumed \com energy of 27\,TeV and an integrated luminosity of \intlumihelhc. The exercise has been performed assuming the evidence of an excess observed at \sqrtslhc\ at a mass $m_{Z'}\approx~6$\,TeV. Overall it was found that it is possible to distinguish among most models. Finally, it should be noted that further studies, perhaps employing 3-body decay modes or associated Z' production will be clearly in case of discovery to further characterize the resonance properties.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -621,12 +601,12 @@ bosons decaying into two electrons or muons in the FCC context. The expected num
 of signal and background events have been estimated from simulated truth level information
 after applying smearing functions to mimic the FCC detector response.
 Using a cut-based analysis and assuming simplistic systematic uncertainties, $\ZpSSM$
-masses below 40 $\TeV$ can be excluded at 95$\%$ C.L.
+masses below 40\,TeV can be excluded at 95$\%$ C.L.
 using 30 $\afb{}$ of data.
 
 \appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Multivariate object tagger}
+\section{Multivariate object tagger}%appendix
 \label{sec:app:mva}
 The training samples are built from jets that do not contain leptons, for example from sem-leptonic b-decays.
 The BDT parameters used are the following : NTrees=600, MaxDepth=4, AdaBoost, AdaBoostBeta=0.15, SeparationType=GiniIndex, nCuts=100, PruneMethod=NoPruning.
@@ -685,7 +665,7 @@ The input variables used to train the BDT, ordered by training weight, can be fo
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tagging rate function}
+\section{Tagging rate function}%appendix
 \label{sec:app:trf}
 Given a jet with $\eta$, $\pt$ and flavour $f$, its tagging probability can be noted as:
 \begin{equation*}
@@ -707,7 +687,7 @@ It was verify that the TRF methods agrees well with the direct tagging.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Background fit}
+\section{Background fit}%appendix
 \label{sec:app:bgfit}
 \begin{equation}
 f(z)=p_1(1-z)^{p_2}z^{p_3}z^{p_{4}logz}
@@ -733,14 +713,14 @@ where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for 
   \hline
   Drell-Yan & 206882.9 & 236597.9 \\
   \hline
-  $\Zp$ 4~TeV & 1421357.9    & 1598969.4 \\
-  $\Zp$ 6~TeV & 349922.4  & 393117.6\\
-  $\Zp$ 8~TeV &   115043.5 & 129698.7 \\
-  $\Zp$ 10~TeV &  45423.5 & 50873.3 \\
-  $\Zp$ 20~TeV &  1192.3 & 1411.5\\
-  $\Zp$ 30~TeV &  88.2 & 107.6\\
-  $\Zp$ 40~TeV &  11.7 & 14.1 \\
-  $\Zp$ 50~TeV &  3.2 & 3.7\\
+  $\Zp$ 4\,TeV & 1421357.9    & 1598969.4 \\
+  $\Zp$ 6\,TeV & 349922.4  & 393117.6\\
+  $\Zp$ 8\,TeV &   115043.5 & 129698.7 \\
+  $\Zp$ 10\,TeV &  45423.5 & 50873.3 \\
+  $\Zp$ 20\,TeV &  1192.3 & 1411.5\\
+  $\Zp$ 30\,TeV &  88.2 & 107.6\\
+  $\Zp$ 40\,TeV &  11.7 & 14.1 \\
+  $\Zp$ 50\,TeV &  3.2 & 3.7\\
   \hline
   \hline
 \end{tabular}
@@ -757,13 +737,13 @@ where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for 
   \hline
   Drell-Yan    & 162699 &  244802 \\
   \hline
-  $\Zp$ 2~TeV  & 737966 & 1040077 \\
-  $\Zp$ 4~TeV  &  30351 &   53020 \\
-  $\Zp$ 6~TeV  &   2694 &    5343 \\
-  $\Zp$ 8~TeV  &    380 &     781 \\
-  $\Zp$ 10~TeV &     76 &     151 \\
-  $\Zp$ 12~TeV &     23 &      41 \\
-  $\Zp$ 14~TeV &     10 &      17 \\
+  $\Zp$ 2\,TeV  & 737966 & 1040077 \\
+  $\Zp$ 4\,TeV  &  30351 &   53020 \\
+  $\Zp$ 6\,TeV  &   2694 &    5343 \\
+  $\Zp$ 8\,TeV  &    380 &     781 \\
+  $\Zp$ 10\,TeV &     76 &     151 \\
+  $\Zp$ 12\,TeV &     23 &      41 \\
+  $\Zp$ 14\,TeV &     10 &      17 \\
   \hline
   \hline
 \end{tabular}
@@ -789,10 +769,10 @@ where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for 
   \hline
   total bkg  &  385555434& 373661126& 157622662 & 85914 & 154856148 & 99137\\
   \hline
-  10~TeV &  - & - &  101529 & 15601 &  47853 & 15745\\
-  20~TeV &   1253072 &  1239813& 7774 & 500.6 & 1282 & 578\\
-  30~TeV &  69922 &  67488 & 485.2 & 13.2 &  61.4 & 30.1 \\
-  40~TeV &  4589 &  4373 & - & - & - & -\\
+  10\,TeV &  - & - &  101529 & 15601 &  47853 & 15745\\
+  20\,TeV &   1253072 &  1239813& 7774 & 500.6 & 1282 & 578\\
+  30\,TeV &  69922 &  67488 & 485.2 & 13.2 &  61.4 & 30.1 \\
+  40\,TeV &  4589 &  4373 & - & - & - & -\\
   \hline
   \hline
 \end{tabular}
@@ -801,7 +781,7 @@ where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for 
 \end{table}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%appendix
 \section{More information on analyses}
 \label{app:anamore}
 \begin{figure}[!htb]
@@ -813,7 +793,7 @@ where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for 
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%appendix
 \section{Summary plots}
 The discovery potential for resonances considered in FCC-hh scenario are summarised in Figure~\ref{figure:resonances100:summary}.
 \begin{figure}[!htb]
@@ -854,7 +834,7 @@ after the paper has been written.
 % please leave only references in the bibliography and move all
 % accessory text in footnotes.
 
-% Also, please have only one work for each \bibitem.
+% Also, please have only one work for each \bibitem.%appendix
 
 
 \end{document}
