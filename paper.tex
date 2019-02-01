@@ -235,21 +235,23 @@ controls the overall coupling strength to all of the various SM particles.
 Monte Carlo~(MC) simulated event samples are used to simulate the response of the detector to signal and backgrounds. Signals are generated with \py~\cite{Sjostrand:2014zea} version v8.201 with the \pdf{NNPDF2\!.\!3NNLO} PDF set~\cite{Ball:2014uwa} using the leading order cross-section from the generator with no k-factor. The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$,  were generated using \MGAMC~\cite{Alwall:2014hca} v2.5.5 at leading order only with the \pdf{NNPDF3\!.\!0NLO}~\cite{Ball:2014uwa} PDF set in bins of $\hht$. A k-factor of 2 is applied to all the background processes to account for higher order corrections.
 
 
-%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Simulation of the detector response}
 \label{subsec:detparam}
 
 This study discusses the potential for discovery of heavy resonances decaying to multi-TeV objects. The ability to accurately reconstruct highly boosted objects is largely dependent on the nature of the resonance decay product and on the detector assumptions. Generally speaking, the energy-momentum resolution of calorimetric objects such as electrons, photons and jets improves as a function of the energy. Conversely, the momentum resolution of particles reconstructed as tracks decrease with the energy as since the curvature of the helix vanishes. In addition, at high energies, composite objects such as jets, or hadronically decaying tau's and heavy bosons tend to be increasingly collimated. This results in an effectively coarser granularity of the detector, which can potentially limit the ability to resolve and identify the decay products inside the jets, thereby limiting the identification and QCD background rejection capabilities.
 
-The detector response has been simulated via the Delphes software package~\cite{deFavereau:2013fsa}. For the \sqrtsfcc\ collider, the reference FCC-hh detector configuration has been used as a baseline~\cite{cdr_volume3, delphes_card_fcc}. For the \sqrtshelhc\, a generic detector configuration~\cite{} that aims at reproducing an average response of the HL-LHC general purpose ATLAS~\cite{} and CMS~\cite{} detectors. For the sake of conciseness, we will simply refer to the HE-LHC and the FCC detectors and will focus on the detector specifications that are relevant for measuring high \pt\ objects only. The overall contribution of pile-up is neglected altogether, as it is assumed to have a relative negligible impact of multi-TeV objects.
+The detector response has been simulated via the Delphes software package~\cite{deFavereau:2013fsa}. For the \sqrtsfcc\ collider, the reference FCC-hh detector configuration has been used as a baseline~\cite{cdr_volume3, delphes_card_fcc}. For the \sqrtshelhc\, a generic detector configuration~\cite{} that aims at reproducing an average response of the HL-LHC general purpose ATLAS~\cite{Aad:2008zzm,Capeans:2010jnh} and CMS~\cite{Chatrchyan:2008aa} detectors. For the sake of conciseness, we will simply refer to the HE-LHC and the FCC detectors and will focus on the detector specifications that are relevant for measuring high \pt\ objects only. The overall contribution of pile-up is neglected altogether, as it is assumed to have a relative negligible impact of multi-TeV objects.
 
-\subsubsection{Tracking}\label{appsub:tracking}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Tracking}
+\label{appsub:tracking}
 
 After collision, parton showering, hadronisation, and decays, the first step of \delphes{}is the propagation of long-lived particles inside the tracking volume within a uniform axial magnetic field parallel to the beam direction. The magnetic field strength $B$, the size of the tracking radius $L$ and the single hit spatial resolution $\sigma_{r\phi}$ are the main parameters that determine the resolution on the track transverse momentum:
 \begin{equation}
 \frac{\sigma(p_T)}{p_{T}} \approx \frac{\sigma_{r\phi}}{B\cdot L^2}\,.
 \end{equation}
-As a benchmark, we assume that the radius of the FCC inner tracking detector is $3/2$ that of the HELHC detector with a similar the magnetic field.  We also assume that the spatial resolution $\sigma_{r\phi}$ is 3 times smaller than at HELHC, which is possible by designing a more granular pixel detector~\cite{CMS:2012sda}. These specifications of the FCC detector would allow measurements of 1 TeV charged hadrons with a precision of $\sigma(p_T)/p_T  \simeq 2\%$, compared to $\sigma(p_T)/p_T \simeq 10\%$ for the HELHC detector. Central, high momentum charged hadrons tracks are assumed to be reconstructed with an efficiency $\epsilon = 95\%$.
+As a benchmark, we assume that the radius of the FCC inner tracking detector is $3/2$ that of the HE-LHC detector with a similar the magnetic field.  We also assume that the spatial resolution $\sigma_{r\phi}$ is 3 times smaller than at HE-LHC, which is possible by designing a more granular pixel detector~\cite{CMS:2012sda}. These specifications of the FCC detector would allow measurements of 1 TeV charged hadrons with a precision of $\sigma(p_T)/p_T  \simeq 2\%$, compared to $\sigma(p_T)/p_T \simeq 10\%$ for the HE-LHC detector. Central, high momentum charged hadrons tracks are assumed to be reconstructed with an efficiency $\epsilon = 95\%$.
 
 \begin{figure}
 \begin{center}
@@ -260,7 +262,7 @@ As a benchmark, we assume that the radius of the FCC inner tracking detector is 
 \label{fig:trkeff}
 \end{figure}
 
-Charged particles confined inside a highly boosted jet can be extremely collimated, resulting in unresolvable tracker hits, especially in the innermost tracking layers. Although an accurate description of this feature would require a full event reconstruction by means of a GEANT-based simulation~\cite{Agostinelli:2002hh}, we constructed a simple model of this effect. A smearing on the norm and the direction of the charged particle momentum vector is applied at the stage of particle propagation. In addition, whenever two or more tracks fall within an angular separation $\sigma(\eta,\phi)$, only the highest momentum track is reconstructed. This effect can result in an additional inefficiency to that shown in Table~\ref{tab:trkeffs}, and affects tracks in the core of highly boosted jets, as shown in Figure~\ref{fig:substructure} (left).
+Charged particles confined inside a highly boosted jet can be extremely collimated, resulting in unresolvable tracker hits, especially in the innermost tracking layers. Although an accurate description of this feature would require a full event reconstruction by means of a GEANT-based simulation~\cite{Agostinelli:2002hh}, we constructed a simple model of this effect. A smearing on the norm and the direction of the charged particle momentum vector is applied at the stage of particle propagation. In addition, whenever two or more tracks fall within an angular separation $\sigma(\eta,\phi)$, only the highest momentum track is reconstructed. This effect can result in an additional inefficiency to that shown in Table~\ref{tab:trk_param}, and affects tracks in the core of highly boosted jets, as shown in Figure~\ref{fig:substructure} (left).
 
 \begin{figure}
   \centering
@@ -270,7 +272,7 @@ Charged particles confined inside a highly boosted jet can be extremely collimat
   \label{fig:substructure}
 \end{figure}
 
-Muons are also reconstructed using tracking. Stand-alone muon is provided by the angular difference between track angle in the muon system and the radial line connection to the beam axis. Again, assuming a 2 times better position resolution of in the muon system for the FCC detector, a combined muon momentum resolution of $\sigma(p_T)/p_T  \simeq 6\%$ can be achieved for momenta as high as 10 TeV/c, as opposed to $\sigma(p_T)/p_T \simeq 6\%$ at $\pt=3~TeV$ for the HELHC detector.
+Muons are also reconstructed using tracking. Stand-alone muon is provided by the angular difference between track angle in the muon system and the radial line connection to the beam axis. Again, assuming a 2 times better position resolution of in the muon system for the FCC detector, a combined muon momentum resolution of $\sigma(p_T)/p_T  \simeq 6\%$ can be achieved for momenta as high as 10 TeV/c, as opposed to $\sigma(p_T)/p_T \simeq 6\%$ at $\pt=3~TeV$ for the HE-LHC detector.
 
 
 \begin {table}
@@ -300,7 +302,9 @@ $\sigma(p_T)/p_T=5\%$ (muons) & $\pt=1$~TeV & $\pt=15$~TeV\\
 \end{table}
 
 
-\subsubsection{Calorimetry and Particle-Flow}\label{appsub:calorimetry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Calorimetry and Particle-Flow}
+\label{appsub:calorimetry}
 
 After propagating within the magnetic field, long-lived particles reach the electromagnetic (ECAL) and hadronic (HCAL) calorimeters. Since these are modeled in \delphes{}~by two-dimensional grids of variable spacing, the calorimeter deposits natively include finite angular resolution effects. In order to accurately model the angular resolution on reconstructed jets, separate grids for ECAL and HCAL has been adopted for this study.
 
@@ -331,7 +335,9 @@ $\eta \times \phi$ cell size (ECAL)& $(0.02\times0.02)$ &  $(0.01\times0.01)$\\
 \end{table}
 %\caption{Comparison of basic detector performances for FCC-hh and HE-LHC.}
 
-\subsubsection{Object identification efficiencies}\label{appsub:calorimetry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Object identification efficiencies}
+\label{appsub:objid}
 
 Trigger, reconstruction and identification efficiencies are parametrised as function of the particle momentum in~\delphes{}. Given that these parameterisations depend on the detailed knowledge of the detector, we simply use a global parameterisation for each object.
 
@@ -339,15 +345,13 @@ For electron and muons, the isolation around a cone is computed as the sum of ov
 
 The identification of jets that result from $\rm{\tau}$ decays or heavy flavour quarks --- $\rm{b}$ or $\rm{c}$ quarks --- typically involves the input from tracking information, such as vertex displacement or low level detector input such as hit multiplicity~\cite{PerezCodina:2631478}. Such information is not available as a default in~\delphes{}. Instead, a purely parametric approach based on Monte-Carlo generator information is used. The probability to be identified as $\rm{b}$ or $\rm{\tau}$ depends on user-defined parameterizations(see Table~\ref{tab:effs}). The behaviour of vanilla heavy flavour tagging algorithms in regimes of extreme boosts is yet unknown. We make the conservative assumption of vanishing efficiency as a function of the transverse momentum for both $\rm{b}$ and $\rm{\tau}$-jets, as shown in Table~\ref{tab:effs}. This choice is motivated by the fact that decay products originating from highly boosted $\rm{b}$ and $\rm{\tau}$ decays will be extremely collimated and highly displaced.
 
-A mis-tagging efficiency, that is, the probability that a particle other than $\rm{b}$ or $\rm{\tau}$ be wrongly identified as a $\rm{b}$ or a $\rm{\tau}$ has been included in the simulation and assumes a similar falling behaviour as a function of the jet momentum. For the b-tagging, the mistag efficiency are parameterised separately for light-jets (uds-quarks) and c-jets. For the $\tau-$tagging we consider only mis-identification from QCD jets.
-
 \begin {table}[h]
 \begin{center}
 \begin{tabular}{ l | c | c | c | c | c }
   & electrons & muons & photons & b-jets & $\tau$-jets\\
   \hline
   \hline
-HELHC & 95\% & 95\% & 95\% & (1 - \pt~[TeV]/5)$\cdot$75\% & (1 - \pt~[TeV]/5)$\cdot$60\%  \\
+HE-LHC & 95\% & 95\% & 95\% & (1 - \pt~[TeV]/5)$\cdot$75\% & (1 - \pt~[TeV]/5)$\cdot$60\%  \\
 FCC & 99\% & 95\% & 95\%  & (1 - \pt~[TeV]/15)$\cdot$85\% & (1 - \pt~[TeV]/30)$\cdot$60\% \\
 \end{tabular}
 \caption{Global reconstruction efficiency of high \pt\ central objects for the HELHC and FCC detectors in Delphes.}
@@ -355,22 +359,25 @@ FCC & 99\% & 95\% & 95\%  & (1 - \pt~[TeV]/15)$\cdot$85\% & (1 - \pt~[TeV]/30)$\
 \end{center}
 \end{table}
 
+A mis-tagging efficiency, that is, the probability that a particle other than $\rm{b}$ or $\rm{\tau}$ be wrongly identified as a $\rm{b}$ or a $\rm{\tau}$ has been included in the simulation and assumes a similar falling behaviour as a function of the jet momentum. For the b-tagging, the mistag efficiency are parameterised separately for light-jets (uds-quarks) and c-jets. For the $\tau-$tagging we consider only mis-identification from QCD jets. Table~\ref{tab:mistag} summarises the main values for the mis-tagging efficiency.
+
 \begin {table}[h]
 \begin{center}
 \begin{tabular}{ l | c | c | c }
   & light (b-tag) & charm (b-tag) & QCD ($\tau$-tag)\\
   \hline
   \hline
-HELHC & (1 - \pt~[TeV]/5)$\cdot$1\%  & (1 - \pt~[TeV]/5)$\cdot$10\% & (1 - \pt~[TeV]/5)$\cdot$1\%  \\
+HE-LHC & (1 - \pt~[TeV]/5)$\cdot$1\%  & (1 - \pt~[TeV]/5)$\cdot$10\% & (1 - \pt~[TeV]/5)$\cdot$1\%  \\
 FCC & (1 - \pt~[TeV]/15)$\cdot$1\% & (1 - \pt~[TeV]/15)$\cdot$5\% & (8/9 - \pt~[TeV]/30)$\cdot$1\% \\
 \end{tabular}
-\caption{Mis-identification efficiency of high \pt\ central heavy flavour jets for the HELHC and FCC detectors in Delphes.}
-\label{tab:effs}
+\caption{Mis-identification efficiency of high \pt\ central heavy flavour jets for the HE-LHC and FCC detectors in Delphes.}
+\label{tab:mistag}
 \end{center}
 \end{table}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Treatment of the Monte-Carlo samples}
 \label{subsec:mctreat}
