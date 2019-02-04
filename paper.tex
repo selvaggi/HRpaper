@@ -289,7 +289,7 @@ $\sigma(p_T)/p_T$ (tracks) &  $0.1\cdot \pt$ (TeV/c) &  $0.02\cdot \pt$ (TeV/c)\
 $\sigma(p_T)/p_T=5\%$ (muons) & $\pt=2$~TeV & $\pt=15$~TeV\\
 
 \end{tabular}
-\caption{Tracking-related parameters for the HELHC and FCC detectors in Delphes.}
+\caption{Tracking-related parameters for the HE-LHC and FCC-hh detectors in Delphes.}
 \label{tab:trk_param}
 \end{center}
 \end{table}
@@ -320,7 +320,7 @@ $\eta \times \phi$ cell size (ECAL)& $(0.02\times0.02)$ &  $(0.01\times0.01)$\\
   \hline
  $\eta \times \phi$ cell size  (HCAL)& $(0.1\times0.1)$ & $(0.025\times0.025)$
 \end{tabular}
-\caption{Calorimeter parameters for the HELHC and FCC detectors in Delphes.}
+\caption{Calorimeter parameters for the HE-LHC and FCC-hh detectors in Delphes.}
 \label{tab:cal_param}
 \end{center}
 \end{table}
@@ -345,7 +345,7 @@ The identification of jets that result from $\rm{\tau}$ decays or heavy flavour 
 HE-LHC & 95\% & 95\% & 95\% & (1 - \pt~[TeV]/5)$\cdot$75\% & (1 - \pt~[TeV]/5)$\cdot$60\%  \\
 FCC-hh & 99\% & 95\% & 95\%  & (1 - \pt~[TeV]/15)$\cdot$85\% & (1 - \pt~[TeV]/30)$\cdot$60\% \\
 \end{tabular}
-\caption{Global reconstruction efficiency of high \pt\ central objects for the HELHC and FCC detectors in Delphes.}
+\caption{Global reconstruction efficiency of high \pt\ central objects for the HE-LHC and FCC-hh detectors in Delphes.}
 \label{tab:effs}
 \end{center}
 \end{table}
@@ -418,16 +418,15 @@ Figure~\ref{figure:leptonicresonances:tautau} shows the di-$\tau$ transverse mas
 
 \begin{table}[htb!]
    \centering
-\begin{tabular}{|l|l|c|r|}
-  \hline
+\begin{tabular}{c|c|c|c}
    $\Zp$ mass [TeV] &  $\Delta \phi(\tau_1, \tau_2)$&  $\Delta R(\tau_1, \tau_2)$ & $\met$\\
+  \hline
   \hline
   $4-8$ & > 2.4 & > 2.5 and < 3.5 & > 400 GeV\\
   $10$ & > 2.4 & > 2.7 and < 4 & > 300 GeV\\
   $12-14$ & > 2.6 & > 2.7 and < 4 & > 300 GeV\\
   $16-18$ & > 2.7 & > 2.7 and < 4 & > 300 GeV\\
   $>18$ & > 2.8 & > 3 and < 4 & > 300 GeV\\
-  \hline
   \end{tabular}
   \caption{List of mass dependent cuts optimised to maximise the sensitivity for the \Zptata\ search.}
   \label{tab:leptonicresonances:tautau}
@@ -534,9 +533,9 @@ The results are summarised in Table~\ref{tab:27vs100}, together with a compariso
 
 \begin{table}[!htb]
    \centering
-\begin{tabular}{|l|l|c|r|}
-  \hline
+\begin{tabular}{c|c|c|c}
    $\Zp$ mass [TeV] &  $\Delta \phi(\tau_1, \tau_2)$&  $\Delta R(\tau_1, \tau_2)$ & $\met$\\
+  \hline
   \hline
    $2$ & > 2.4 & > 2.4 and < 3.9 & > 80 GeV\\
    $4$ & > 2.4 & > 2.7 and < 4.4 & > 80 GeV\\
@@ -545,7 +544,6 @@ The results are summarised in Table~\ref{tab:27vs100}, together with a compariso
   $10$ & > 2.8 & > 2.9 and < 4.1 & > 60 GeV\\
 %  $12$ & > 2.8 & > 3.0 and < 3.6 & > 60 GeV\\
 %  $14$ & > 3.0 & > 3.0 and < 3.3 & > 60 GeV\\
-  \hline
   \end{tabular}
   \caption{Mass dependent cuts optimised to maximise the sensitivity for the \Zptata\ resonance search.}
   \label{tab:leptonicresonances:tautau27}
@@ -619,8 +617,10 @@ for each dilepton channel.
 %
 \begin{table}
 \centering
-\begin{tabular}{|l|c|c|c|} \hline\hline
+\begin{tabular}{c|c|c|c}
+
   Model &   95$\%$ \cl  &  $3\sigma$  & $5\sigma$   \\
+\hline
 \hline
 SSM    &     6.62     &  6.09    &  5.62     \\
 LRM    &   6.39     & 5.85     & 5.39  \\
@@ -628,7 +628,6 @@ $\psi$    &  6.10   & 5.55   & 5.07  \\
 $\chi$   &  6.22    & 5.68    & 5.26   \\
 $\eta$   &  6.15     &  5.59  &  5.16   \\
 ~I        & 5.98   &  5.45   &  5.05  \\
-\hline\hline
 \end{tabular}
 \caption{ Mass reach for several $Z'$ models at \sqrtslhc\ with \intlumihllhc. }
 \label{tab:pheno:spec}
