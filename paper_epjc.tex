@@ -1,7 +1,7 @@
 %\RequirePackage{fix-cm}
 
 \documentclass[pdftex,twocolumn,epjc3]{svjour3}          % twocolumn
-
+\usepackage{commands}
 \RequirePackage[T1]{fontenc}
 
 \smartqed  % flush right qed marks, e.g. at end of proof
@@ -16,24 +16,34 @@
 
 \begin{document}
 
-\title{Insert your title here\thanksref{t1}}
+\title{\boldmath Heavy resonances at energy-frontier hadron colliders}
 
-\subtitle{Do you have a subtitle?\\ If so, write it here}
+%\subtitle{Do you have a subtitle?\\ If so, write it here}
 
-\author{First Author\thanksref{e1,addr1}
+
+\author{David~Jamin\thanksref{e1,addr1,addr3}
         \and
-        Second Author\thanksref{e2,addr2,addr3} %etc.
+        Clement~Helsens\thanksref{e2,addr1}
+        \and
+        Michelangelo~L.~Mangano\thanksref{e3,addr1}
+        \and
+        Thomas~G.~Rizzo\thanksref{e4,addr2}
+        \and
+        Michele~Selvaggi\thanksref{e5,addr1}
 }
 
-\thankstext[$\star$]{t1}{Thanks to the title}
-\thankstext{e1}{e-mail: magic1@xxx.xx}
-\thankstext{e2}{e-mail: magic2@xxx.xx}
+%\thankstext[$\star$]{t1}{Thanks to the title}
+\thankstext{e1}{e-mail: david.jamin@cern.ch}
+\thankstext{e2}{e-mail: clement.helsens@cern.ch}
+\thankstext{e3}{e-mail: michelangelo.mangano@cern.ch}
+\thankstext{e4}{e-mail: rizzo@slac.stanford.edu}
+\thankstext{e5}{e-mail: michele.selvaggi@cern.ch}
 
-\institute{First Address, Street, City, Country\label{addr1}
+\institute{CERN, CH-1211 Geneva 23, Switzerland\label{addr1}
           \and
-          Second Address, Street, City, Country\label{addr2}
+          SLAC National Accelerator Laboratory 2575 Sand Hill Rd., Menlo Park, CA, 94025 USA\label{addr2}
           \and
-          \emph{Present Address:} Street, City, Country\label{addr3}
+          Academia Sinica, Institute of  Physics, Taipei, Taiwan\label{addr3}
 }
 
 \date{Received: date / Accepted: date}
@@ -43,12 +53,10 @@
 \maketitle
 
 \begin{abstract}
-Insert your abstract here. Insert your abstract here. Insert your abstract here.
-Insert your abstract here. Insert your abstract here. Insert your abstract here.
-Insert your abstract here. Insert your abstract here. Insert your abstract here.
+This paper explores the physics reach of the proton-proton Future Circular Collider (FCC-hh) and of the High-Energy LHC (HE-LHC) for searches of new particles produced in the $s$ channel and decaying to two high-energy leptons, jets (non-tops), tops or W/Z bosons. We discuss the expected discovery potential and exclusion limits for benchmark models predicting new massive particles that result in resonant structures in the invariant mass spectrum. We also present a detailed study of the HE-LHC potential to discriminate among different models, for a $\Zp$ that could be discovered by the end of High-Luminosity LHC (HL-LHC).
 \end{abstract}
 
-
+\input{paper_text}
 
 \begin{thebibliography}{9}
 \bibliography{paper}

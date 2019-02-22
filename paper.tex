@@ -1,4 +1,6 @@
 \documentclass[a4paper,11pt]{article}
+\usepackage{commands}
+
 \pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
              % images in pdf, png or jpg format)
 
@@ -10,11 +12,12 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
-
+\usepackage{pagecolor}
+%\usepackage{tcolorbox}
 \usepackage[colorinlistoftodos]{todonotes}
 %\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
-\title{\boldmath Heavy resonances at energy frontier colliders}
+\title{\boldmath Heavy resonances at energy frontier hadron colliders}
 
 \author[a,c]{David~Jamin}
 \author[a]{\!\!, Clement~Helsens}
@@ -34,79 +37,8 @@
 \emailAdd{michele.selvaggi@cern.ch}
 
 
-\newcommand{\CH}[1] {\textbf{\textcolor{blue}{CH - #1}}}
-\newcommand{\MS}[1] {\textbf{\textcolor{purple}{MS - #1}}}
-\newcommand{\MLM}[1] {\textbf{\textcolor{green}{MLM - #1}}}
-\newcommand{\TR}[1] {\textbf{\textcolor{red}{TR - #1}}}
-\newcommand{\DA}[1] {\textbf{\textcolor{orange}{DJ - #1}}}
 
-\newcommand{\Zp}{\ensuremath{Z^{\prime}}}
-\newcommand{\ZpSSM}{\ensuremath{Z^{\prime}_{\mathrm{SSM}}}}
-\newcommand{\ZpTC}{\ensuremath{Z^{\prime}_{\mathrm{TC2}}}}
-\newcommand{\Z}{\ensuremath{Z}}
-\newcommand*{\Zptata}{\ensuremath{Z^{\prime}\rightarrow \tau\tau}}
-\newcommand*{\Zpee}{\ensuremath{Z^{\prime}\rightarrow \text{ee}}}
-\newcommand*{\Zpmumu}{\ensuremath{Z^{\prime}\rightarrow \mu\mu}}
-\newcommand*{\Zpll}{\ensuremath{Z^{\prime}\rightarrow \ell\ell}}
-\newcommand*{\Zptt}{\ensuremath{Z^{\prime} \rightarrow \ttbar}}
-\newcommand{\ptSub}[1]{\ensuremath{p_{\text{T} #1}}}
-\newcommand{\ptSup}[1]{\ensuremath{p_{\text{T}}^{#1}}}
-\newcommand{\pt}{\ensuremath{p_{\text{T}}}}
-\newcommand{\ptEl}{\ensuremath{p_{\text{T}}^{e}}}
-\newcommand{\ptMu}{\ensuremath{p_{\text{T}}^{\mu{}}}}
-\newcommand{\ptZp}{\ensuremath{p_{\text{T}}^{\ensuremath{Z^{\prime}}}}}
-\newcommand{\mZp}{\ensuremath{M_{\ensuremath{Z^{\prime}}}}}
-\newcommand{\mSD}{\ensuremath{m_{\ensuremath{SD}}}}
-\newcommand{\mll}{\ensuremath{m_{\ensuremath{ll}}}}
-\newcommand*{\hht}{\ensuremath{H_{\ensuremath{T}}}}
-\newcommand*{\met}{\ensuremath{E_{T}^{\rm{miss}}}}
-\newcommand*{\intlumifcc}{\ensuremath{\mathcal{L}=30\,\text{ab}^{-1}}}
-\newcommand*{\intlumihelhc}{\ensuremath{\mathcal{L}=15\,\text{ab}^{-1}}}
-\newcommand*{\qjj}{\ensuremath{Q^{*} \rightarrow jj}}
-\newcommand*{\rsg}{\ensuremath{G_{RS} \rightarrow W^+W^-}}
-\newcommand*{\vj}{\ensuremath{\text{V + jets}}}
-\newcommand*{\metvec}{\vec{\pt}^{\textrm{miss}}}
-
-\newcommand*{\ee}{\ensuremath{e^{+}e^{-}}}
-\newcommand*{\mumu}{\ensuremath{\mu^{+}\mu^{-}}}
-\newcommand*{\tautau}{\ensuremath{\tau^{+}\tau^{-}}}
-\newcommand*{\ellell}{\ensuremath{\ell^{+}\ell^{-}}}
-\newcommand*{\ttbar}{\ensuremath{t\bar{t}}}
-\newcommand*{\bbbar}{\ensuremath{b\bar{b}}}
-\newcommand*{\ww}{\ensuremath{W^{+}W^{-}}}
-\newcommand*{\jj}{\ensuremath{jj}}
-\newcommand*{\com}{c.o.m.~}
-\newcommand*{\cl}{C.L.~}
-
-\newcommand*{\sqrtslhc}{\ensuremath{\sqrt{s}=14\,\text{TeV}}}
-\newcommand*{\sqrtshelhc}{\ensuremath{\sqrt{s}=27\,\text{TeV}}}
-\newcommand*{\sqrtsfcc}{\ensuremath{\sqrt{s}=100\,\text{TeV}}}
-\renewcommand*{\intlumihelhc}{\ensuremath{\mathcal{L}=15\text{ ab}^{-1}}}
-\newcommand*{\intlumihllhc}{\ensuremath{\mathcal{L}=3\text{ ab}^{-1}}}
-
-
-\newcommand{\amc}{{\sc MadGraph5\textunderscore}a{\sc MC@NLO}}
-\newcommand*{\MGAMC}{\textsc{MG5}\_aMC}
-
-\newcommand{\py}{{\sc Pythia8}}
-\newcommand{\delphes}{{\sc Delphes}}
-\newcommand*{\pdf}[1]{\texttt{#1}}
-
-\def\ifb{\mbox{fb$^{-1}$}}%  Inverse femtobarns.
-\def\afb{\mbox{ab$^{-1}$}}%  Inverse atobarns.
-
-\def\TeV{\ifmmode {\mathrm{\ Te\kern -0.1em V}}\else
-                   \textrm{Te\kern -0.1em V}\fi}%
-\def\GeV{\ifmmode {\mathrm{\ Ge\kern -0.1em V}}\else
-                   \textrm{Ge\kern -0.1em V}\fi}%
-\def\MeV{\ifmmode {\mathrm{\ Me\kern -0.1em V}}\else
-                   \textrm{Me\kern -0.1em V}\fi}%
-\def\keV{\ifmmode {\mathrm{\ ke\kern -0.1em V}}\else
-                   \textrm{ke\kern -0.1em V}\fi}%
-\def\eV{\ifmmode  {\mathrm{\ e\kern -0.1em V}}\else
-                   \textrm{e\kern -0.1em V}\fi}%
-
-\abstract{This paper explores the physics reach of the proton-proton Future Circular Collider (FCC-hh) and High Energy LHC (HE-LHC) for searches of new particles decaying to two high energetic leptons, jets (non-tops), tops and W/Z boson. We discuss the expected exclusion limits and discovery potential for benchmark models predicting new massive particles that result in resonant structures in the invariant mass spectrum. This document also includes a detailed study on the discrimination potential of a $\Zp$ at HE-LHC in case of discovery at the end of High-Luminosity LHC (HL-LHC).}
+\abstract{This paper explores the physics reach of the proton-proton Future Circular Collider (FCC-hh) and High Energy LHC (HE-LHC) for searches of new particles produced in the $s$ channel and decaying to two high energetic leptons, jets (non-tops), tops and W/Z bosons. We discuss the expected exclusion limits and discovery potential for benchmark models predicting new massive particles that result in resonant structures in the invariant mass spectrum. We also present a detailed study on the discrimination potential of a $\Zp$ at HE-LHC, in case of its discovery at the end of High-Luminosity LHC (HL-LHC).}
 
 \begin{document}
 \maketitle
@@ -115,18 +47,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
-Particle accelerators are built to answer some of the most fundamental questions about the natural world. For LHC it was guaranteed that the Standard Model (SM) Higgs boson would be found; however, for the next generation of machines there is no possibility to guarantee that any new particle will be discovered. Still with much higher center of mass energies compared to LHC, there are guaranteed deliverables like the study of the Higgs and top-quark properties and exploration of electroweak symmetry breaking phenomena with unmatchable precision and sensitivity.
+Particle accelerators are built to answer some of the most fundamental questions about the natural world. For LHC it was guaranteed that the Standard Model (SM) Higgs boson would be found; however, for the next generation of machines there is no possibility to guarantee that any new particle will be discovered. Still with much higher center of mass energies compared to LHC, there are guaranteed deliverables like for example the study of the Higgs and top-quark properties, the exploration of electroweak symmetry breaking phenomena with unmatchable precision and sensitivity.
 
-New machines are built to make direct discoveries, and even though we do not have any guaranted discoveries, we need to make sure that we will cover a large fraction of Beyond the SM (BSM) phase space. Qualitatively, the mass reach should roughly scale by a factor of $\sqrt{s}/14$, so $\sim 7$ for FCC at \sqrtsfcc\ and $\sim 2$ for HE-LHC at \sqrtshelhc. However, with the parton luminosities evolving with $Q^2$, thus dropping a bit faster at high energy, one typically finds it is only a factor of $\sim 5$ increase. But the statistics are also enhanced by several orders of magnitude for many Beyond Standard Model (BSM) phenomena, that the LHC could barely touch during its exploitation. It is not only that the mass reach increases by a large factor, but it is the fact that if the LHC were to see some hints of possible new physics, by increasing the energy by a factor seven, we would increase the statistics by two or even three orders of magnitude, and we can use this new machine to study with great accuracy what it is that has been found. In addition we could have the ability to provide firm answers to questions such as: is the SM dynamics all there at the TeV scale, is there a TeV scale solution to the hierarchy problem, is dark matter a thermal wimp (either we discover it as a WIMP, or we find out DM is not a WIMP and it has to be something else), was the cosmological EW phase transition $1^{\mathrm{st}}$ order, etc...
+Even though energy frontier machines are built to make direct discoveries, not having the certitude that new particles will be observed, we need to make sure that the largest possible fraction of the Beyond the SM (BSM) phase space is covered. Concerning the high mass reach, it should roughly scale by a factor of $\sqrt{s}/14$, so $\sim 7$ for FCC at \sqrtsfcc\ and $\sim 2$ for HE-LHC at \sqrtshelhc. However, with the parton luminosities evolving with $Q^2$, thus dropping a bit faster at high energy, a 30\% reduction compared to the naive scaling is expected. But the statistics is enhanced by several orders of magnitude for many BSM phenomena, which the LHC could barely have access to. Thus it is not only that the mass reach increases by a large factor, but if the LHC were to see some hints of possible new physics, by increasing the energy by a large factor, we would increase the statistics by two or even three orders of magnitude. This new machine could then be used to study with great accuracy what the LHC experiments would have started to detect. 
+%In addition we could have the ability to provide firm answers to questions such as: does the SM dynamics still holds at the TeV scale, is there a TeV scale solution to the hierarchy problem, is dark matter a thermal WIMP\footnote{either we discover it as a WIMP, or we find out DM is not a WIMP and it has to be something else}, was the cosmological Electro-Weak phase transition $1^{\mathrm{st}}$ order, etc\dots
 
-Concerning the topic of this paper, the discovery potential for new resonances not predicted by the SM makes Future Circular Colliders (FCC) the only place to search directly for such heavy particles, compared to the current LHC and the coming HL-LHC.
-In the framework of FCC it is also extremely relevant to discuss the main limitations of the detector in identifying high energetic top-quarks or W/Z bosons. Indeed 100\,TeV proton-proton collisions will produce very large quantities of multi-TeV's bosons or top, thus the design of the detector needs detailed optimisations in order to achieve the required physics goals. The capabilities of such a detector should include the capabilities of measuring multi-TeV leptons, top-quarks and bosons, and will be discussed in this paper.
+Concerning the topic of this paper, the discovery potential for BSM resonances %not predicted by the SM 
+makes Future Circular Colliders (FCC) the only place to search directly for such heavy particles, compared to the current LHC and the coming HL-LHC.
+In the framework of FCC it is also extremely relevant to discuss the main limitations of the detector in identifying high energetic particles. Indeed 100\,TeV proton-proton collisions will produce very large quantities of multi-TeV's objects, thus the design of the detector needs detailed optimisations in order to achieve the required physics goals which are discussed in this document.
 
-This document presents the expectations of some of the most relevant BSM scenarios and the considered models are discussed in the section~\ref{sec:bsmmodels}.
-Details on the generators, detector parameterization, statistical methods and other analysis techniques developed are presented in the section~\ref{sec:simulation}.
-The leptonic resonances ($ee$, $\mu\mu$, $\tau\tau$) and the hadronic resonances (WW, $t\bar{t}$ and jj) analyses are detailed in sections~\ref{sec:lep} and~\ref{sec:hadronic} respectively.
-The analyses strategy started from optimisation at FCC-hh, but the results have also been extracted in the case of the HE-LHC scenario and are summarised in section~\ref{sec:ana27tev}.
-Finally, a study of model discrimination at HE-LHC in case of discovery at the end of HL-LHC run is presented in section~\ref{sec:zprimedisc}.
+This paper presents the expectations of some of the most relevant BSM scenarios together with the considered models in the Section~\ref{sec:bsmmodels}. Details on the generators, detector performance, statistical method and other analysis techniques are presented in section~\ref{sec:simulation}. The leptonic ($ee$, $\mu\mu$, $\tau\tau$) and the hadronic (WW, $t\bar{t}$ and jj) analyses are detailed in Sections~\ref{sec:lep} and~\ref{sec:hadronic} respectively. The results of the analyses are disucussed in the context of the FCC-hh, but the sensitivity of the HE-LHC to the same benchmark has been estimated and is summarised in Section~\ref{sec:ana27tev}. Finally, a study of \Zp model discrimination at the HE-LHC in case of a discovery at the HL-LHC is presented in Section~\ref{sec:zprimedisc}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{BSM Models}
@@ -233,7 +163,7 @@ controls the overall coupling strength to all of the various SM particles.
 \subsection{Monte-Carlo production}
 \label{subsec:mcprod}
 
-Monte Carlo~(MC) simulated event samples are used to simulate the response of the detector to signal and backgrounds. Signals are generated with \py~\cite{Sjostrand:2014zea} version v8.201 with the \pdf{NNPDF2\!.\!3NNLO} PDF set~\cite{Ball:2014uwa} using the leading order cross-section from the generator with no k-factor. The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$,  were generated using \MGAMC~\cite{Alwall:2014hca} v2.5.5 at leading order only with the \pdf{NNPDF3\!.\!0NLO}~\cite{Ball:2014uwa} PDF set in bins of $\hht$. A k-factor of 2 is applied to all the background processes to account for higher order corrections and is considered to be very conservative.
+Monte Carlo~(MC) event samples are used to simulate the response of the detector to signals and backgrounds processes. Signals are generated with \py~\cite{Sjostrand:2014zea} version 8.201 with the \pdf{NNPDF2\!.\!3NNLO} PDF set~\cite{Ball:2014uwa} using the leading order cross-section from the generator with no k-factor. The SM backgrounds considered are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$ and were generated using \MGAMC~\cite{Alwall:2014hca} version 2.5.5 at leading order only with the \pdf{NNPDF3\!.\!0NLO}~\cite{Ball:2014uwa} PDF set in bins of $\hht$. A k-factor of 2 is applied to all the background processes to account for higher order corrections and is considered to be very conservative.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,9 +182,35 @@ After collision, parton showering, hadronisation, and decays, the first step of 
 \begin{equation}
 \frac{\sigma(\pt)}{\pt} \approx \frac{\sigma_{r\phi}~ \pt}{B\cdot L^2}\,.
 \end{equation}
-The radius of the FCC-hh inner tracking detector is $3/2$ that of the HE-LHC detector with a similar the magnetic field.  The spatial resolution $\sigma_{r\phi}$ is 3 times smaller than at HE-LHC, which is possible by thanks to a more granular pixel detector~\cite{CMS:2012sda}. These specifications of the FCC-hh detector would allow measurements of $\pt=$~1 TeV charged hadrons with a precision of $\sigma(\pt)/\pt  \simeq 2\%$, compared to $\sigma(\pt)/\pt \simeq 10\%$ for the HE-LHC detector. 
+The radius of the FCC-hh inner tracking detector is $3/2$ that of the HE-LHC detector with a similar magnetic field of 4 Tesla.  The spatial resolution $\sigma_{r\phi}$ is 3 times smaller than at HE-LHC, which is possible by thanks to a more granular pixel detector~\cite{CMS:2012sda}. These specifications of the FCC-hh detector would allow measurements of $\pt=$~1 TeV charged hadrons with a precision of $\sigma(\pt)/\pt  \simeq 2\%$, compared to $\sigma(\pt)/\pt \simeq 10\%$ for the HE-LHC detector. 
 
-Central, isolated, high momentum charged hadrons tracks are assumed to be reconstructed with an efficiency $\epsilon = 95\%$. However, charged particles confined inside a highly boosted jet can be extremely collimated, resulting in unresolvable tracker hits, especially in the innermost tracking layers. Although an accurate description of this feature would require a full event reconstruction by means of a GEANT-based simulation~\cite{Agostinelli:2002hh}, a specific \delphes{}~ module aimed at reproducing this has been designed. Whenever two or more tracks fall within an angular separation $\sigma(\eta,\phi)$, only the highest momentum track is reconstructed. This effect can result in an additional inefficiency to that shown in Table~\ref{tab:trk_param}, and can affect the ability to reconstruct tracks in the core of highly boosted jets, as shown in Figure~\ref{fig:substructure} (left).
+Central and isolated high momentum charged hadrons tracks are assumed to be reconstructed with an efficiency $\epsilon = 95\%$. However, charged particles confined inside a highly boosted jet can be extremely collimated, resulting in unresolvable tracker hits, especially in the innermost tracking layers. Although an accurate description of this feature would require a full event reconstruction by means of a GEANT4-based simulation~\cite{Agostinelli:2002hh,Allison:2006ve,Allison:2016lfl}, a specific \delphes{}~ module aiming at reproducing this effect has been designed. Whenever two or more tracks fall within an angular separation $\sigma(\eta,\phi)$, only the highest momentum track is reconstructed. This effect can result in an additional inefficiency to that shown in Table~\ref{tab:trk_param}, and can affect the ability to reconstruct tracks in the core of highly boosted jets, as shown in Figure~\ref{fig:substructure} (left).
+
+\begin {table}[htb!]
+\begin{center}
+\begin{tabular}{l||c|c}
+& FCC-hh & HE-LHC \\
+  \hline
+  \hline
+$B_z$ $(T)$ &  4 & 4 \\
+  \hline
+Length $(m)$ & 10 & 6 \\
+ \hline
+Radius $(m)$ & 1.5 &  1.1 \\
+ \hline
+$\epsilon$ & 0.95 & 0.95\\
+\hline
+$\sigma(\eta,\phi) (mrad) $ & 1  & 3  \\
+\hline
+$\sigma(p_T)/p_T$ (tracks) &  $0.02\cdot \pt$ (TeV/c) &  $0.1\cdot \pt$ (TeV/c)\\
+\hline
+$\sigma(p_T)/p_T=5\%$ (muons) & $\pt=15$~TeV & $\pt=2$~TeV\\
+
+\end{tabular}
+\caption{Tracking-related parameters for the FCC-hh and HE-LHC detectors in Delphes.}
+\label{tab:trk_param}
+\end{center}
+\end{table}
 
 \begin{figure}[htb!]
   \centering
@@ -265,41 +221,17 @@ Central, isolated, high momentum charged hadrons tracks are assumed to be recons
   \label{fig:substructure}
 \end{figure}
 
-Muons are also reconstructed using tracking. However, an additional stand-alone muon measurement is provided by the angular difference between track angle in the muon system and the radial line connection to the beam axis, giving a large improvement on the resolution at high \pt~\cite{cdr_volume3}. Again, assuming a 2 times better position resolution of in the muon system for the FCC-hh detector, a combined muon momentum resolution of $\sigma(\pt)/\pt  \simeq 5\%$ can be achieved for momenta as high as $\pt=$~15 TeV/c, as opposed to $\sigma(\pt)/\pt \simeq 5\%$ at $\pt=2~$TeV for the HE-LHC detector.
+Muons are also reconstructed using tracking. However, an additional stand-alone muon measurement is provided by the angular difference between track angle in the muon system and the radial line connection to the beam axis, giving a large improvement on the resolution at high \pt~\cite{cdr_volume3}. Assuming a 2 times better position resolution of the muon system for the FCC-hh detector, a combined muon momentum resolution of $\sigma(\pt)/\pt  \simeq 5\%$ can be achieved for momenta as high as $\pt=$~15 TeV, as opposed to $\pt=2~$TeV for the HE-LHC detector.
 
 
-\begin {table}[htb!]
-\begin{center}
-\begin{tabular}{l||c|c}
-& HE-LHC & FCC-hh \\
-  \hline
-  \hline
-$B_z$ $(T)$ &  4 & 4 \\
-  \hline
-Length $(m)$ & 6 & 10 \\
- \hline
-Radius $(m)$ & 1.1 &  1.5 \\
- \hline
-$\epsilon$ & 0.95 & 0.95\\
-\hline
-$\sigma(\eta,\phi)$ & 3 mrad & 1 mrad \\
-\hline
-$\sigma(p_T)/p_T$ (tracks) &  $0.1\cdot \pt$ (TeV/c) &  $0.02\cdot \pt$ (TeV/c)\\
-\hline
-$\sigma(p_T)/p_T=5\%$ (muons) & $\pt=2$~TeV & $\pt=15$~TeV\\
 
-\end{tabular}
-\caption{Tracking-related parameters for the HE-LHC and FCC-hh detectors in Delphes.}
-\label{tab:trk_param}
-\end{center}
-\end{table}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Calorimetry and Particle-Flow}
 \label{appsub:calorimetry}
 
-After propagating within the magnetic field, long-lived particles reach the electromagnetic (ECAL) and hadronic (HCAL) calorimeters. Since these are modeled in \delphes{}~by two-dimensional grids of variable spacing, the calorimeter deposits natively include finite angular resolution effects. Separate grids for ECAL and HCAL have been designed for both the HE-LHC and the FCC-hh detectors in order to accurately model the angular resolution on reconstructed jets. The FCC-hh detector features an improved angular resolution by a factor 2 in the ECAL and a factor 4 in the HCAL compared to the HE-LHC detector. The energy resolution of the calorimeters is assumed to be the same for both detectors. The calorimeter parameters for the HE-LHC and FCC-hh setups are summarised in Table~\ref{tab:cal_param}.
+After propagating within the magnetic field, long-lived particles reach the electromagnetic (ECAL) and hadronic (HCAL) calorimeters. Since these are modeled in \delphes{}~by two-dimensional grids of variable spacing, the calorimeter deposits natively include finite angular resolution effects. Separate grids for ECAL and HCAL have been designed for both the FCC-hh and the HE-LHC detectors in order to accurately model the angular resolution on reconstructed jets. The FCC-hh detector features an improved angular resolution by a factor 2 in the ECAL and a factor 4 in the HCAL compared to the HE-LHC detector. The energy resolution of the calorimeters is assumed to be the same for both detectors and the calorimeter parameters are summarised in Table~\ref{tab:cal_param}.
 
 In \delphes{}~the information provided by the tracker and calorimeters is combined within the particle-flow algorithm for an optimal event reconstruction. If the momentum resolution of the tracking system is better than the energy resolution of calorimeters (typically for momenta below some threshold) the charged particles momenta are measured mainly through tracking. Vice-versa at high energy, calorimeters provide a better momentum measurement. The particle-flow algorithm exploits this complementarity to provide the best possible single charged particle measurement --- the \emph{particle-flow tracks}. These contain electron, muons and charged hadrons. Jet collections are then formed using several different input objects such as tracks (\emph{Track-jets}), calorimeter (\emph{Calo-jets}) and particle-flow candidates (\emph{PF-jets}). The Delphes framework integrates the FastJet package~\cite{Cacciari:2011ma}, allowing for jet reconstruction with the most popular jet clustering algorithms. In the present study the anti-$k_T$ algorithm~\cite{Cacciari:2008gp} is used with several jet clustering R parameters ($R=0.2, 0.4, 0.8, 1.5$).
 
@@ -308,7 +240,7 @@ Common jet shape observables used for jet substructure analysis such as N-subjet
 \begin {table}[htb!]
 \begin{center}
 \begin{tabular}{l||c|c}
-& HE-LHC & FCC-hh \\
+& FCC-hh & HE-LHC  \\
   \hline
   \hline
 $\sigma(E)/E $ (ECAL)& 10\%/$\sqrt{E} \oplus 1\%$ &  10\%/$\sqrt{E} \oplus 1\%$\\
@@ -316,11 +248,11 @@ $\sigma(E)/E $ (ECAL)& 10\%/$\sqrt{E} \oplus 1\%$ &  10\%/$\sqrt{E} \oplus 1\%$\
 $\sigma(E)/E $ (HCAL)& 50\%/$\sqrt{E} \oplus 3\%$  &  50\%/$\sqrt{E} \oplus 3\%$\\
   \hline
   \hline
-$\eta \times \phi$ cell size (ECAL)& $(0.02\times0.02)$ &  $(0.01\times0.01)$\\
+$\eta \times \phi$ cell size (ECAL)& $(0.01\times0.01)$ &  $(0.02\times0.02)$\\
   \hline
- $\eta \times \phi$ cell size  (HCAL)& $(0.1\times0.1)$ & $(0.025\times0.025)$
+ $\eta \times \phi$ cell size  (HCAL)& $(0.025\times0.025)$ & $(0.1\times0.1)$
 \end{tabular}
-\caption{Calorimeter parameters for the HE-LHC and FCC-hh detectors in Delphes.}
+\caption{Calorimeter parameters for the FCC-hh and HE-LHC detectors in Delphes.}
 \label{tab:cal_param}
 \end{center}
 \end{table}
@@ -342,8 +274,8 @@ The identification of jets that result from $\rm{\tau}$ decays or heavy flavour 
   & electrons & muons & photons & b-jets & $\tau$-jets\\
   \hline
   \hline
-HE-LHC & 95\% & 95\% & 95\% & (1 - \pt~[TeV]/5)$\cdot$75\% & (1 - \pt~[TeV]/5)$\cdot$60\%  \\
 FCC-hh & 99\% & 95\% & 95\%  & (1 - \pt~[TeV]/15)$\cdot$85\% & (1 - \pt~[TeV]/30)$\cdot$60\% \\
+HE-LHC & 95\% & 95\% & 95\% & (1 - \pt~[TeV]/5)$\cdot$75\% & (1 - \pt~[TeV]/5)$\cdot$60\%  \\
 \end{tabular}
 \caption{Global reconstruction efficiency of high \pt\ central objects for the HE-LHC and FCC-hh detectors in Delphes.}
 \label{tab:effs}
@@ -358,8 +290,8 @@ A mis-tagging efficiency, that is, the probability that a particle other than $\
   & light (b-tag) & charm (b-tag) & QCD ($\tau$-tag)\\
   \hline
   \hline
-HE-LHC & (1 - \pt~[TeV]/5)$\cdot$1\%  & (1 - \pt~[TeV]/5)$\cdot$10\% & (1 - \pt~[TeV]/5)$\cdot$1\%  \\
 FCC-hh & (1 - \pt~[TeV]/15)$\cdot$1\% & (1 - \pt~[TeV]/15)$\cdot$5\% & (8/9 - \pt~[TeV]/30)$\cdot$1\% \\
+HE-LHC & (1 - \pt~[TeV]/5)$\cdot$1\%  & (1 - \pt~[TeV]/5)$\cdot$10\% & (1 - \pt~[TeV]/5)$\cdot$1\%  \\
 \end{tabular}
 \caption{Mis-identification efficiency of high \pt\ central heavy flavour jets for the HE-LHC and FCC detectors in Delphes.}
 \label{tab:mistag}
@@ -395,7 +327,7 @@ The decay products of heavy resonances are in the multi-TeV regime and the capab
 Events are required to contain two isolated opposite sign leptons with $\pt > 1$\,TeV, $|\eta|$<4 and an invariant mass \mll\ > 2.5\,TeV.
 Figure~\ref{figure:leptonicresonances:ll} left shows the invariant mass for a 30\,TeV \ZpSSM\ signal for the $\mu\mu$ channel. The di-electron invariant mass spectrum is not shown, but as expected from the calorimeter constant term that dominates the resolution at high \pt, the mass resolution is better for the $ee$ channel.
 The di-lepton invariant mass spectrum is used as the discriminant and a 50\% normalisation uncertainty on the background normalisation is assumed.
-Figure~\ref{figure:leptonicresonances:ll} (bottom left) shows the 95\% CL exclusion limit obtained with 30\,ab$^{-1}$ of data combining ee and $\mu\mu$ channels. Figure~\ref{figure:leptonicresonances:ll} (bottom right) shows the integrated luminosity required to reach a $5\sigma$ discovery as a function of the mass of the heavy resonance. The \Zpee\ and \Zpmumu\ channel display very similar performance due to the low background rates. We conclude therefore that the reference detector design features near to optimal performance for searches involving high \pt\ muon final states. Combining $ee$ and $\mu\mu$ channels, masses up to 42\,TeV can be excluded or discovered. Event yields and limits for $ee$ and $\mu\mu$ alone can be found in Appendix~\ref{app:anamore} and Appendix~\ref{app:yields} respectively.
+Figure~\ref{figure:leptonicresonances:ll} (bottom left) shows the 95\% CL exclusion limit obtained with 30\,ab$^{-1}$ of data combining ee and $\mu\mu$ channels. Figure~\ref{figure:leptonicresonances:ll} (bottom right) shows the integrated luminosity required to reach a $5\sigma$ discovery as a function of the mass of the heavy resonance. The \Zpee\ and \Zpmumu\ channel display very similar performance due to the low background rates. We conclude therefore that the reference detector design features near to optimal performance for searches involving high \pt\ muon final states. Combining $ee$ and $\mu\mu$ channels, masses up to 42\,TeV can be excluded or discovered.
 
 \begin{figure}[!htb]
   \centering
@@ -741,15 +673,7 @@ This paper presents studies of a search for heavy resonances decaying to leptons
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Multivariate object tagger}%appendix
 \label{sec:app:mva}
-The training samples are built from jets that do not contain leptons, for example from sem-leptonic b-decays.
-The BDT parameters used are the following : NTrees=600, MaxDepth=4, AdaBoost, AdaBoostBeta=0.15, SeparationType=GiniIndex, nCuts=100, PruneMethod=NoPruning.
-As an example, the $E_{F}(n=1,\alpha=0.05)$ observable is shown in Figures~\ref{fig:TMVA_final_result} left.
-The evolution of the light jet efficiency versus the $W$ and top tagging efficiencies for both taggers is shown in Figure~\ref{fig:TMVA_final_result} right.
-Cross-checks have been performed to further validate the procedure. First, by removing highly correlated variables, such as \CH{@David Add example}, it showed the same performances \CH{@ David, then why don't we remove the correlated variables?}.
-As a second test, the BDT response has been tested for different signal masses to understand how the mass dependence could affect the analyses. For the cut used in the analysis (BDT score greater than 0.15), the shape of the BDT is not dramatically changing the signal efficiency.% and it removes 90\% and 95\% of light jets for thad and Whad taggers respectively.
-
-%The input variables are defined to be the same as the ones used to perform cut-based associated analysis (\Zptt\ and \rsg\ in section~\ref{subsec:hadreso}) and the idea is to fully exploit these informations thanks to the BDT.
-The input variables used to train the BDT, ordered by training weight, can be found in table~\ref{tab:TMVA_summary}.
+The training samples are built from jets that do not contain leptons, that could come from semi-leptonic b-decays. As an example, the $E_{F}(n=1,\alpha=0.05)$ observable used in the $W$-tagger is shown in Figure~\ref{fig:TMVA_final_result} left and the $\tau_{32}$ observable used in the top-tagger is on the right. The evolution of the light jet efficiency versus the $W$ and top tagging efficiencies for both taggers is shown in Figure~\ref{fig:TMVA_final_result} right. Cross-checks have been performed to further validate the multivariate procedure. First, by removing highly correlated variables the same performances are achieved. Second, the BDT response has been tested for different signal masses to understand how the mass dependence could affect the analyses. For the cut used in the analysis (BDT score greater than 0.15), the shape of the BDT is not dramatically changing the signal efficiency. The input variables used to train the BDT, ordered by training weight, can be found in table~\ref{tab:TMVA_summary}.
 
 \begin{table}[!htb]\centering
 \begin{tabular}{| l | c | l | c |}
@@ -757,13 +681,6 @@ The input variables used to train the BDT, ordered by training weight, can be fo
   \multicolumn{2}{|c|}{$W$ tagger}  & \multicolumn{2}{c|}{top tagger} \\
   \hline
  variable & weight & variable & weight \\
-%\hline
-%\hline
-%Sample signal     & pp\_$RSG$\_$WW$\_20TeV (1M) & pp\_$Z'_{TC2}$\_$tt$\_20TeV (1M) \\
-%Sample background & pp\_$jj$\_lo ($j$ = $u$, $d$, $c$, $s$ or $b$) (920k) & pp\_$jj$\_lo ($j$ = $u$, $d$, $c$, $s$ or $b$) (920k)               \\
-%\hline
-%Train stat. signal (jets)     & 1117500 & 1432192 \\
-%Train stat. background (jets) & 1578098 & 1578098 \\
 \hline
 % rename them
  $\tau_3$ (track jet, R=0.2)      & 0.12      & $\tau_1$ (track jet, R=0.2) & 0.21  \\
@@ -782,17 +699,17 @@ The input variables used to train the BDT, ordered by training weight, can be fo
  $\tau_{32}$  (track jet, R=0.2) & 0.02    &  &\\
 \hline
 \end{tabular}
-\caption{Summary of the input variables to the BDT and their relative weight for both $W$ and top taggers.}
+\caption{Summary of the input variables to the BDT and their relative weight for both $W$ and top taggers. \CH{could drop that table}}
 \label{tab:TMVA_summary}
 \end{table}
 
 
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=0.3\textwidth]{Fig/TMVA/Jet1_Flow15_sel0_nostack_logx-eps-converted-to.pdf}
-\includegraphics[width=0.3\textwidth]{Fig/TMVA/Jet1_tau32_sel0_nostack_log-eps-converted-to.pdf}
-\includegraphics[width=0.3\textwidth]{Fig/TMVA/effQCD_vs_effWhadBlue_thadRed_log.pdf}
-\caption{Left: Energy-flow ($E_{F}(1,0.05)$) observable for W and QCD jets. Middle: ($\tau_(3,2)$) observable for t and QCD jets. Right: Light jet rejection versus tagging efficiency for the $W$ tagger (blue) and top tagger (red) -> re-do on-going.}
+\includegraphics[width=0.32\textwidth]{Fig/TMVA/Jet1_Flow15_sel0_nostack_logx-eps-converted-to.pdf}
+\includegraphics[width=0.32\textwidth]{Fig/TMVA/Jet1_tau32_sel0_nostack_log-eps-converted-to.pdf}
+\includegraphics[width=0.32\textwidth]{Fig/TMVA/effQCD_vs_effWhadBlue_thadRed_log.pdf}
+\caption{Left: Energy-flow $E_{F}(n=1,\alpha=0.05)$ observable for the leading jet $p_T$ of the \rsg\ analysis at the pre-selection level (two high $p_T$ jets). Middle: $\tau_{32}$ observable for the leading jet $p_T$ of the \Zptt\ analysis at the pre-selection level (two high $p_T$ jets). Right: Light jet rejection versus tagging efficiency for the $W$-tagger (blue) and top-tagger (red)}
 \label{fig:TMVA_final_result}
 \end{figure}
 
@@ -822,105 +739,35 @@ It was verify that the TRF methods agrees well with the direct tagging.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background fit}%appendix
 \label{sec:app:bgfit}
+The function used to fit the background shapes when Monte-Carlo statistic is insufficient can be expressed as:
 \begin{equation}
+\label{eq:fitfunc}
 f(z)=p_1(1-z)^{p_2}z^{p_3}z^{p_{4}logz}
 \end{equation}
-where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for the backgrounds, while the normalisation is taken prior to the fit (see figure~\ref{fig:hadronicresonances_nofit}).
+where $z=m_{jj}/\sqrt{s}$, with $m_{jj}$ the invariant mass of the two high energetic objects and $\sqrt{s}$ the center of mass energy. Fitting the invariant mass distribution with the function~\ref{eq:fitfunc} allows to obtain a smooth shape, while the overall normalisation is taken prior to the fit. Figure~\ref{fig:hadronicresonances_nofit}) left shows the \Zptt\ invariant mass distribution after the final selection for the various backgrounds and a 10\,TeV signal. Large statistical fluctuations can be observed especially for the QCD background that is heavily suppressed thanks to the multivariate object tagger. The right plot represents the same QCD invariant mass distribution before the fit (dots) and after the fit (plain). Good agreement is observed and the fitted distribution normalised to the pre-fit yields is used to obtain the results in the statistical analysis.
 
 \begin{figure}[!htb]\centering
-\includegraphics[width=0.45\columnwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_sel8_nostack_log-eps-converted-to.pdf}
-\includegraphics[width=0.45\columnwidth]{Fig/Zptt/Zptt_QCD_sel8_Mj1j2_pf08_MetCorr_fit-eps-converted-to.pdf}
+\includegraphics[width=0.49\columnwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_sel8_nostack_log-eps-converted-to.pdf}
+\includegraphics[width=0.49\columnwidth]{Fig/Zptt/Zptt_QCD_sel8_Mj1j2_pf08_MetCorr_fit-eps-converted-to.pdf}
 \caption{Invariant mass prior to fit.}
 \label{fig:hadronicresonances_nofit}
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Event yields}%appendix
-\label{app:yields}
-\begin{table}[htbp]
-   \centering
-\begin{tabular}{|l|r|r|}
-  \hline
- & $ee$ & $\mu\mu$  \\
-  \hline
-  Drell-Yan & 206882.9 & 236597.9 \\
-  \hline
-  $\Zp$ 4\,TeV & 1421357.9    & 1598969.4 \\
-  $\Zp$ 6\,TeV & 349922.4  & 393117.6\\
-  $\Zp$ 8\,TeV &   115043.5 & 129698.7 \\
-  $\Zp$ 10\,TeV &  45423.5 & 50873.3 \\
-  $\Zp$ 20\,TeV &  1192.3 & 1411.5\\
-  $\Zp$ 30\,TeV &  88.2 & 107.6\\
-  $\Zp$ 40\,TeV &  11.7 & 14.1 \\
-  $\Zp$ 50\,TeV &  3.2 & 3.7\\
-  \hline
-  \hline
-\end{tabular}
-  \caption{Expected number of events at FCC-hh for the \Zpee\ and \Zpmumu\ analysis after the full event selection for the SSM signal hypothesis and considering 30\,ab$^{-1}$ of integrated luminosity.}
-  \label{tab:leptonicresonances:yieldsll}
-\end{table}
-
-
-\begin{table}[htbp]
-   \centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-  \hline
-  \hline
-  & \multicolumn{2}{c|}{di-jet}  & \multicolumn{2}{c|}{$\ttbar$} & \multicolumn{2}{c|}{WW} \\
-  \cline{2-7}
-
- & pre-sel & final-sel  & pre-sel & final-sel & pre-sel & final-sel\\
-  \hline
-  di-jet & 385555434 &  373661126 &  154855591 & 11439.8&  154856148 & 64484\\
-  $\ttbar$ & - & - & 1114779 & 74193.6 &  1114779 & 3185\\
-  di-bosons & - & - &  41820 &  17.1 &  41820 & 6092\\
-  boson+jet & - & - & 1610472 & 264.1&  1610472 & 25377\\
-  \hline
-  total bkg  &  385555434& 373661126& 157622662 & 85914 & 154856148 & 99137\\
-  \hline
-  10\,TeV &  - & - &  101529 & 15601 &  47853 & 15745\\
-  20\,TeV &   1253072 &  1239813& 7774 & 500.6 & 1282 & 578\\
-  30\,TeV &  69922 &  67488 & 485.2 & 13.2 &  61.4 & 30.1 \\
-  40\,TeV &  4589 &  4373 & - & - & - & -\\
-  \hline
-  \hline
-\end{tabular}
-  \caption{Expected number of events at FCC-hh for the di-jet, $\ttbar$ and WW analyses after pre and final selection.}
-  \label{tab:hadronicresonances:yields}
-\end{table}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%appendix
-\section{More information on analyses}
-\label{app:anamore}
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[width=0.35\columnwidth]{Fig/lim_Zprime_ee_fcc_v02_allxs-eps-converted-to.pdf}
-  \includegraphics[width=0.35\columnwidth]{Fig/lim_Zprime_mumu_fcc_v02_allxs-eps-converted-to.pdf}
-  \caption{Limit versus mass for the ee channel (left) and $\mu\mu$ channel (right) for an integrated luminosity of $30$\,ab$^{-1}$. }
-  \label{figure:leptonicresonances:resultseemumu}
-\end{figure}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%appendix%appendix
 \section{Summary plots}
-The discovery potential for the heavy resonances presented in this document are summarised in Figure~\ref{figure:resonances100:summary} for FCC-hh (left) and HE-LHC (right).
+The discovery potential (top) and 95\% CL limits (bottom) for the heavy resonances presented in this document are summarised in Figure~\ref{figure:resonances100:summary} for FCC-hh (left) and HE-LHC (right).
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.49\columnwidth]{Fig/summaryDisco_onlyFCChh.pdf}
   \includegraphics[width=0.49\columnwidth]{Fig/summaryDisco_onlyHELHC.pdf}
-  \caption{Summary of a $5\sigma$ discovery reach as a function of the resonance mass for different luminosity scenario of FCC-hh and HE-LHC.}
+   \includegraphics[width=0.49\columnwidth]{Fig/summaryLimit_onlyFCChh.pdf}
+  \includegraphics[width=0.49\columnwidth]{Fig/summaryLimit_onlyHELHC.pdf}
+  \caption{Summary of a $5\sigma$ discovery reach (top) and 95\% CL limits (bottom) as a function of the resonance mass for different luminosity scenario of FCC-hh (left) and HE-LHC (right).}
   \label{figure:resonances100:summary}
 \end{figure}
 
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[width=0.49\columnwidth]{Fig/summaryLimit_onlyFCChh.pdf}
-  \includegraphics[width=0.49\columnwidth]{Fig/summaryLimit_onlyHELHC.pdf}
-  \caption{Summary of the 95\% CL limits as a function of the resonance mass for different luminosity scenario of FCC-hh and HE-LHC.}
-  \label{figure:resonances100:summarylimit}
-\end{figure}
 
 \acknowledgments
 
